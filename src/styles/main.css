@@ -1,0 +1,93 @@
+/** https://submelon.tech/res/css/main.css
+  * Main stylesheet for submelon.tech website.
+  * Author: Kevin J Hoerr
+  */
+body {
+	background-color: #e1e1e1; /* #e1e1e1, #d5d5d5 */
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAGXpUWHRUaXRsZQAACNdLSkzOTi/KL81LAQAWSwQhPQTyzQAAABt6VFh0QXV0aG9yAAAI1/NOLcvMU/DITy0qAgAYDwQeUS3vvwAAAZNJREFUeNrt3bFtQ0EMREH5x+q/M3Wi3IJaMGR7yHtbwCWDBY4J+fV4PL5vH879fr9tz/P5/JV3rzAcjI+DhAGBhAGBhAGBhAGBhAGBhAGBhAGBhAGBhAGBhAGBhAGBhAGBhAGBhAGBhAGBhAGBhAGBhAGBhAGBhDHglxXG/+RdjisMB2N1QyZirAWZirESZDLGOpDpGKtANmCsAdmCsQJkE8Z4kG0Yo0E2YowF2YoxEmQzxjiQ7RijQE7AGANyCsYIkJMweJDTMGiQEzFYkFMxSJCTMTiQ0zEokDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAgkDAGTuph/E3e5bjCcDBGNOS03fRXGA4GDXLq1YYrDAeDBDn9nskVhoNBgYQBgYQBgYQBgYQBgYQBgYQBgYQBgYQBgYQBgYQBgYQBgYQBgYTxs7wA+yQwVSKvoHMAAAAASUVORK5CYII=);
+	background-repeat: repeat;
+	font-family: Verdana;
+	font-size: 16px;
+}
+::selection {
+	background-color: #999;
+	color: #fff;
+}
+div#content {
+	width: 350px;
+	margin: 0px auto;
+	margin-bottom: 120px;
+	padding-top: 136px;
+}
+div#header {
+	text-align: center;
+	pointer-events: none;
+	user-select: none;
+}
+div#tagline {
+	background-color: #000;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 36px;
+	font-weight: bold;
+}
+div#info {
+	padding: 4px 8px;
+}
+div#info a, div#info a:visited, div#info a:hover {
+	text-decoration: none;
+	color: #000;
+	padding: 1px 3px;
+}
+div#info a, div#info a:visited {
+	background-color: #e1e1e1;
+}
+div#info a:hover {
+	background-color: #d5d5d5;
+}
+div#info,div.link {
+	background-color: #fff;
+	border: 1px #000 solid;
+	border-left: 3px #000 solid;
+	border-right: 3px #000 solid;
+}
+div.link, div#tagline {
+	margin-top: 3px;
+}
+div.link > a, div.link > a:visited, div.link > a:active {
+	padding: 8px;
+	width: 328px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #666;
+}
+div.link:hover {
+	background-color: #ddd;
+	color: #222;
+}
+div.link:last-child, div.link:last-child > a {
+	border-bottom-left-radius: 18px;
+	border-bottom-right-radius: 18px;
+}
+q, p, em {
+	display: block;
+	text-indent: 28px;
+}
+
+p {
+	margin: 0px 0px 16px;
+}
+
+div#meta {
+	width: 100%;
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	text-align: center;
+	font-size: 12px;
+}
+div#meta > span {
+	background-color: #e1e1e1;
+}
