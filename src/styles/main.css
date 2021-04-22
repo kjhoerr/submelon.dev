@@ -20,6 +20,7 @@ div#content {
 	padding-top: 136px;
 }
 div#header {
+	margin: 0px 5px;
 	text-align: center;
 	pointer-events: none;
 	user-select: none;
