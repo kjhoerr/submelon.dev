@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import SEO from "../components/SEO";
 import "../styles/main.css";
+import { FaMastodon } from "react-icons/fa";
 
-const TIMESTAMP = "1619067584";
+const TIMESTAMP = "1619122879";
 const SHORT_CHARS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 function toShort (valu: number): string {
@@ -130,7 +131,7 @@ const IndexPage = () => {
 		</div>
 		<div id="links">
 			<div className="link">
-				<a href="https://cybr.es/@kjhoerr" rel="me">Mastodon: @kjhoerr@cybr.es</a>
+				<a href="https://cybr.es/@kjhoerr" rel="me"><FaMastodon size={20} style={{ marginBottom: "-4px" }} /> @kjhoerr@cybr.es</a>
 			</div>
 			<div className="link">
         <a href="https://order.blackrockbrews.com">Black Rock Brewing (recent project)</a>
