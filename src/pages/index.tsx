@@ -110,23 +110,22 @@ const IndexPage = () => {
     <main>
       <SEO title="Kevin J Hoerr <kjhoerr@submelon.tech>" />
       <StyledContainer>
-
 	<div id="content">
 		<div id="header">
 			<StaticImage
-        src="../images/main.png"
-        alt="Kevin J Hoerr" 
-        placeholder="blurred"
-        layout="fixed"
-        width={340}
-        height={340}
-      />
+        		src="../images/main.png"
+        		alt="Kevin J Hoerr" 
+        		placeholder="blurred"
+        		layout="fixed"
+        		width={340}
+        		height={340}
+      		/>
 		</div>
 		<div id="tagline">Hello!</div>
 		<div id="info">
 			<p>I'm a computer science and math graduate from Millersville University. I work as an IT consultant and specialize in development operations and systems validation for web applications.</p>
-      <p>My most recent projects have been focused on full-stack development. I use Kubernetes for orchestration, NextJS for front-end, and rust+actix-web for my backend services with GraphQL serving as the public API.</p>
-      <p>This was recently rebuilt in GatsbyJS since the instance formerly holding this website broke during upgrades. Thank goodness for backups.</p>
+      		<p>My most recent projects have been focused on full-stack development. I use Kubernetes for orchestration, NextJS for front-end, and rust+actix-web for my backend services with GraphQL serving as the public API.</p>
+      		<p>This site was recently rebuilt using GatsbyJS since the instance formerly holding this website broke during upgrades. Thank goodness for backups.</p>
 			<em>- Kevin H.</em>
 		</div>
 		<div id="links">
@@ -134,15 +133,15 @@ const IndexPage = () => {
 				<a href="https://cybr.es/@kjhoerr" rel="me"><FaMastodon size={20} style={{ marginBottom: "-4px" }} /> @kjhoerr@cybr.es</a>
 			</div>
 			<div className="link">
-        <a href="https://order.blackrockbrews.com">Black Rock Brewing (recent project)</a>
+        		<a href="https://order.blackrockbrews.com">Black Rock Brewing (recent project)</a>
 			</div>
 			<div className="link">
-        <a href="https://git.submelon.dev">My Gitea instance for pet projects</a>
+        		<a href="https://git.submelon.dev">My Gitea instance for pet projects</a>
 			</div>
 		</div>
 	</div>
 
-	<div id="meta"><span>&copy;2021 kjhoerr@//submelon.tech/:{getTimestamp(parseInt(TIMESTAMP))}</span></div>
+	<div id="meta"><span>&copy;2021 kjhoerr@https://submelon.dev/:{getTimestamp(parseInt(TIMESTAMP))}</span></div>
   </StyledContainer>
     </main>
   );
