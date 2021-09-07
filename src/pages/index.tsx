@@ -5,7 +5,7 @@ import SEO from "../components/SEO";
 import "../styles/main.css";
 import { FaMastodon } from "react-icons/fa";
 
-const TIMESTAMP = "1619122879";
+const TIMESTAMP = "1631045797";
 const SHORT_CHARS = [
   "0",
   "1",
@@ -81,11 +81,11 @@ function toShort(valu: number): string {
 
 function getTimestamp(seconds: number): string {
   const date = new Date(seconds * 1000);
-  const year = date.getFullYear();
-  const month = date.getMonth();
-  const day = date.getDate();
-  const hour = date.getHours();
-  const minute = date.getMinutes();
+  const year = date.getUTCFullYear();
+  const month = date.getUTCMonth();
+  const day = date.getUTCDate();
+  const hour = date.getUTCHours();
+  const minute = date.getUTCMinutes();
   return (
     toShort(year) +
     "." +
