@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "submelon.tech",
-    description: "The official website of Kevin Hoerr, the developer of websites.",
+    description:
+      "The official website of Kevin Hoerr, the developer of websites.",
     author: "Kevin J Hoerr",
   },
   plugins: [

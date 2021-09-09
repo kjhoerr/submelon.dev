@@ -81,23 +81,15 @@ function toShort(valu: number): string {
 
 function getTimestamp(seconds: number): string {
   const date = new Date(seconds * 1000);
-  const year = date.getUTCFullYear();
-  const month = date.getUTCMonth();
-  const day = date.getUTCDate();
-  const hour = date.getUTCHours();
-  const minute = date.getUTCMinutes();
-  return (
-    toShort(year) +
-    "." +
-    toShort(month) +
-    "." +
-    toShort(day) +
-    "." +
-    toShort(hour) +
-    "." +
-    toShort(minute) +
-    "-0"
-  );
+  const dateArr = [
+    date.getUTCFullYear(),
+    date.getUTCMonth(),
+    date.getUTCDate(),
+    date.getUTCHours(),
+    date.getUTCMinutes(),
+  ];
+
+  return dateArr.map(toShort).join(".") + "-0";
 }
 
 // styles
@@ -193,7 +185,7 @@ const StyledContainer = styled.div`
 `;
 
 // markup
-const IndexPage = () => {
+const IndexPage = (): React.ReactElement => {
   return (
     <main>
       <SEO title="Kevin J Hoerr <kjhoerr@submelon.tech>" />
@@ -212,7 +204,7 @@ const IndexPage = () => {
           <div id="tagline">Hello!</div>
           <div id="info">
             <p>
-              I'm a computer science and math graduate from Millersville
+              I&apos;m a computer science and math graduate from Millersville
               University. I work as an IT consultant and specialize in
               development operations and systems validation for web
               applications.
