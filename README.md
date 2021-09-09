@@ -5,7 +5,7 @@
 The Dockerfile works via a fresh clone, no pre-build or npm install is needed. It can be tagged as follows:
 
 ```
-docker build -t registry.digitalocean.com/submelon-tech/submelon.tech:1.0.0 .
+docker build --push -t registry.digitalocean.com/submelon-tech/submelon.tech:1.0.0 .
 ```
 
 Or if using M1/ARM,
