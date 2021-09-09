@@ -1,54 +1,39 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# submelon.dev
 
-## 🚀 Quick start
+## Deploying
 
-1.  **Create a Gatsby site.**
+### Using Docker
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+The Dockerfile works via a fresh clone, no pre-build is needed. It can be tagged as follows:
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+```
+docker build -t registry.digitalocean.com/submelon-tech/submelon.tech:latest .
+```
 
-2.  **Start developing.**
+Or if using M1/ARM,
 
-    Navigate into your new site’s directory and start it up.
+```
+docker buildx build --platform linux/amd64 -t registry.digitalocean.com/submelon-tech/submelon.tech:latest .
+```
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+If the build fails in error as a result of the image, the base gatsby images can be rebuilt. (The gatsby images as exist on Dockerhub do not work.) To rebuild those images, run the following commands:
 
-3.  **Open the code and start customizing!**
+```
+cd ..
+git clone https://github.com/gatsbyjs/gatsby-docker
+cd gatsby-docker
+docker build -t gatsbyjs/gatsby:onbuild -f Dockerfile.onbuild .
+docker build -t gatsbyjs/gatsby:latest -f Dockerfile .
+```
 
-    Your site is now running at http://localhost:8000!
+Or if using M1/ARM,
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+```
+cd ..
+git clone https://github.com/gatsbyjs/gatsby-docker
+cd gatsby-docker
+docker buildx build --platform linux/amd64 -t gatsbyjs/gatsby:onbuild -f Dockerfile.onbuild .
+docker buildx build --platform linux/amd64 -t gatsbyjs/gatsby:latest -f Dockerfile .
+```
 
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+And then attempt rebuild of the submelon.tech image.
