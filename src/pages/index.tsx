@@ -5,7 +5,7 @@ import SEO from "../components/SEO";
 import "../styles/main.css";
 import { FaMastodon } from "react-icons/fa";
 
-const TIMESTAMP = "1631045797";
+const TIMESTAMP = "1641237448";
 const SHORT_CHARS = [
   "0",
   "1",
