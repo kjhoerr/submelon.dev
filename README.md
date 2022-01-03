@@ -8,32 +8,19 @@ The Dockerfile works via a fresh clone, no pre-build or npm install is needed. I
 docker build --push -t registry.digitalocean.com/submelon-tech/submelon.tech:1.0.0 .
 ```
 
-Or if using M1/ARM,
-
-```
-docker buildx build --platform linux/amd64 --push -t registry.digitalocean.com/submelon-tech/submelon.tech:1.0.0 .
-```
-
 (Reference authenticating to use DigitalOcean's Container Registry below.)
 
 If the build fails in error as a result of the image, the base gatsby images can be rebuilt. (The gatsby images as exist on Dockerhub do not work.) To rebuild those images, run the following commands:
 
+To note, the gatsby-docker repository is now out of date. A newer node image must be used.
+
 ```
 cd ..
 git clone https://github.com/gatsbyjs/gatsby-docker
 cd gatsby-docker
+# Change node:12-buster to node:lts-buster in Dockerfile.onbuild
 docker build -t gatsbyjs/gatsby:onbuild -f Dockerfile.onbuild .
 docker build -t gatsbyjs/gatsby:latest -f Dockerfile .
-```
-
-Or if using M1/ARM,
-
-```
-cd ..
-git clone https://github.com/gatsbyjs/gatsby-docker
-cd gatsby-docker
-docker buildx build --platform linux/amd64 -t gatsbyjs/gatsby:onbuild -f Dockerfile.onbuild .
-docker buildx build --platform linux/amd64 -t gatsbyjs/gatsby:latest -f Dockerfile .
 ```
 
 And then attempt rebuild of the submelon.tech image.
