@@ -1,0 +1,11 @@
+{
+	"name": "Submelon FP",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:16-bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-from-docker:1": {}
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "npm install"
+
+}
