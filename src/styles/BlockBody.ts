@@ -11,7 +11,7 @@ export default styled.div`
   border-left: 3px #000 solid;
   border-right: 3px #000 solid;
 
-  padding: ${(props) => props.theme.padding ?? "0"};
+  padding: ${(props) => (props.theme.link ? "0" : "4px 8px")};
 
   & > ${BlockAnchor} {
     &:hover {

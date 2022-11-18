@@ -24,7 +24,7 @@ const IndexPage = (): React.ReactElement => {
           />
         </div>
         <BlockHeader>Hello!</BlockHeader>
-        <BlockBody theme={{ padding: "4px 8px" }}>
+        <BlockBody>
           <p>
             I&apos;m a computer science and math graduate from Millersville
             University. I work as an IT consultant and specialize in development

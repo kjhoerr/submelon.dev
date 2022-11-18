@@ -3,7 +3,7 @@ import { BlockAnchor, BlockBody } from "../styles";
 
 const BlockLink = ({ children, ...attributes }) => {
   return (
-    <BlockBody>
+    <BlockBody theme={{ link: true }}>
       <BlockAnchor {...attributes}>{children}</BlockAnchor>
     </BlockBody>
   );

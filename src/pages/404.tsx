@@ -8,7 +8,7 @@ const NotFoundPage = (): React.ReactElement => {
     <main>
       <Content>
         <BlockHeader>Not found</BlockHeader>
-        <BlockBody theme={{ padding: "4px 8px" }}>
+        <BlockBody>
           Sorry{" "}
           <span role="img" aria-label="Pensive emoji">
             😔
