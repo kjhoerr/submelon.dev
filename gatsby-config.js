@@ -1,15 +1,7 @@
 module.exports = {
-  siteMetadata: {
-    title: "submelon.tech",
-    description:
-      "The official website of Kevin Hoerr, the developer of websites.",
-    author: "Kevin J Hoerr",
-  },
   plugins: [
-    "gatsby-plugin-typescript",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

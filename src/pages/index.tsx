@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
-import SEO from "../components/SEO";
 import "../styles/main.css";
-import { FaMastodon } from "react-icons/fa";
+import { FaGithub, FaMastodon } from "react-icons/fa";
 
-const TIMESTAMP = "1641237448";
+const TIMESTAMP = "1668805149";
 const SHORT_CHARS = [
   "0",
   "1",
@@ -72,11 +71,13 @@ const SHORT_CHARS = [
 ];
 
 function toShort(valu: number): string {
-  return valu
-    .toString()
-    .match(/.{1,2}/g)
-    .map((s) => SHORT_CHARS[parseInt(s)])
-    .join("");
+  return (
+    valu
+      .toString()
+      .match(/.{1,2}/g)
+      ?.map((s) => SHORT_CHARS[parseInt(s)])
+      .join("") ?? ""
+  );
 }
 
 function getTimestamp(seconds: number): string {
@@ -188,7 +189,6 @@ const StyledContainer = styled.div`
 const IndexPage = (): React.ReactElement => {
   return (
     <main>
-      <SEO title="Kevin J Hoerr <kjhoerr@submelon.tech>" />
       <StyledContainer>
         <div id="content">
           <div id="header">
@@ -230,13 +230,9 @@ const IndexPage = (): React.ReactElement => {
               </a>
             </div>
             <div className="link">
-              <a href="https://order.blackrockbrews.com">
-                Black Rock Brewing (recent project)
-              </a>
-            </div>
-            <div className="link">
-              <a href="https://git.submelon.dev">
-                My Gitea instance for pet projects
+              <a href="https://github.com/kjhoerr">
+                <FaGithub size={20} style={{ marginBottom: "-4px" }} /> My git
+                projects
               </a>
             </div>
           </div>
@@ -244,7 +240,7 @@ const IndexPage = (): React.ReactElement => {
 
         <div id="meta">
           <span>
-            &copy;2021 kjhoerr@https://submelon.dev/:
+            &copy;2022 kjhoerr@https://submelon.dev/:
             {getTimestamp(parseInt(TIMESTAMP))}
           </span>
         </div>
@@ -254,3 +250,4 @@ const IndexPage = (): React.ReactElement => {
 };
 
 export default IndexPage;
+export { Head } from "../components/SEO";
