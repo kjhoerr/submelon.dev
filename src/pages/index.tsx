@@ -5,8 +5,7 @@ import { FaGithub, FaMastodon } from "react-icons/fa";
 import BlockLink from "../components/BlockLink";
 import Footer from "../components/Footer";
 import { BlockBody, BlockHeader, Content } from "../styles";
-
-const TIMESTAMP = "1668805149";
+import { version } from "../../package.json";
 
 // markup
 const IndexPage = (): React.ReactElement => {
@@ -61,7 +60,7 @@ const IndexPage = (): React.ReactElement => {
         </BlockLink>
       </Content>
 
-      <Footer timestamp={TIMESTAMP} />
+      <Footer timestamp={version} />
     </main>
   );
 };
