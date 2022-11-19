@@ -23,10 +23,11 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - name: Commit public changes
-      uses: EndBug/add-and-commit@v9
+      uses: swinton/commit@v2.x
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        add: 'public'
-        author_name: "Kevin J Hoerr"
-        author_email: "kjhoerr@protonmail.com"
-        commit: --signoff
-        message: 'Commit from GitHub Actions (updated public build)'
+        files: |
+          public
+        commit-message: 'Commit from GitHub Actions (updated public build)'
+        ref: refs/heads/trunk
