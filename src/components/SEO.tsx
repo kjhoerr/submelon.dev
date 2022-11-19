@@ -1,88 +1,25 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
 
-interface MetaProps {
-  name: string;
-  content: string;
-}
-
-interface SEOProps {
-  description: string;
-  lang: string;
-  meta: MetaProps[];
-  title: string;
-}
-
-function SEO({ description, lang, meta, title }: SEOProps): React.ReactElement {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  );
-  const metaDescription = description || site.siteMetadata.description;
+export function Head(): React.ReactElement {
+  const metaDescription =
+    "The official website of Kevin Hoerr, developer of websites.";
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+    <>
+      <meta name="twitter:description" content={metaDescription} />
+      <meta
+        name="twitter:title"
+        content="Kevin J Hoerr &lt;kjhoerr@submelon.tech&gt;"
+      />
+      <meta name="twitter:creator" content="Kevin J Hoerr" />
+      <meta name="twitter:card" content="summary" />
+      <meta property="og:type" content="website" />
+      <meta property="og:description" content={metaDescription} />
+      <meta
+        property="og:title"
+        content="Kevin J Hoerr &lt;kjhoerr@submelon.tech&gt;"
+      />
+      <meta name="description" content={metaDescription} />
+      <title>Kevin J Hoerr &lt;kjhoerr@submelon.tech&gt;</title>
+    </>
   );
 }
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-};
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-};
-export default SEO;
