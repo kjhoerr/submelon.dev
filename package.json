@@ -16,9 +16,11 @@
     "lint": "eslint src --ext ts --ext tsx --ext js --ext jsx"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "5.0.1",
     "gatsby-plugin-image": "3.0.0",
     "gatsby-plugin-manifest": "5.0.0",
+    "gatsby-plugin-offline": "^6.0.0",
     "gatsby-plugin-sharp": "5.0.0",
     "gatsby-plugin-styled-components": "6.0.0",
     "gatsby-source-filesystem": "5.0.0",

@@ -12,6 +12,15 @@ module.exports = {
         theme_color: `#e1e1e1`,
         display: `browser`,
         icon: `src/images/favicon-70x70.png`,
+        cache_busting_mode: `none`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        workboxConfig: {
+          globPatterns: ["**/icons*"],
+        },
       },
     },
     "gatsby-plugin-sharp",
