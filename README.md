@@ -2,7 +2,7 @@
 
 [![submelon.dev build](https://github.com/kjhoerr/submelon.dev/actions/workflows/build.yml/badge.svg)](https://github.com/kjhoerr/submelon.dev/actions/workflows/build.yml)
 
-The front page for submelon.dev - a "link-in-bio" site of sorts, with other resources available for reference.
+The front page for [submelon.dev](https://submelon.dev) - a "link-in-bio" site of sorts, with other resources available for reference.
 
 ## Description
 
