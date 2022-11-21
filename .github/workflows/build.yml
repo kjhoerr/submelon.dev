@@ -28,6 +28,6 @@ jobs:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         files: |
-          public
+          public/*
         commit-message: 'Commit from GitHub Actions (updated public build)'
         ref: refs/heads/trunk
