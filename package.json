@@ -4,6 +4,11 @@
   "private": true,
   "description": "submelon.dev",
   "author": "Kevin J Hoerr",
+  "license": "BlueOak-1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjhoerr/submelon.dev.git"
+  },
   "keywords": [
     "gatsby"
   ],
