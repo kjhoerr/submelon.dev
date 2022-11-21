@@ -2,7 +2,7 @@
 
 [![submelon.dev build](https://github.com/kjhoerr/submelon.dev/actions/workflows/build.yml/badge.svg)](https://github.com/kjhoerr/submelon.dev/actions/workflows/build.yml)
 
-The front page for submelon.dev - a "link-in-bio" site of sorts, with other resources available for reference.
+The front page for [submelon.dev](https://submelon.dev) - a "link-in-bio" site of sorts, with other resources available for reference.
 
 ## Description
 
@@ -11,6 +11,10 @@ This is a static site generated and enabled using GatsbyJS. All sources includin
 ## History
 
 This was originally a purely static site (no JS/TS) that has morphed to permit use of newer technologies and integrations and for ease of updating. There are no server integrations outside of serving static assets. At present, this site does not make use of any scripting features to enable any actual front-end features, though the components are built in ReactJS and compiled using the GatsbyJS framework.
+
+## License
+
+This project is licensed under [the Blue Oak Model License 1.0.0](LICENSE.md).
 
 ## Hosting
 
