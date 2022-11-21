@@ -1,55 +1,19 @@
 # submelon.dev
 
-## Deploying Using Docker
+[![submelon.dev build](https://github.com/kjhoerr/submelon.dev/actions/workflows/build.yml/badge.svg)](https://github.com/kjhoerr/submelon.dev/actions/workflows/build.yml)
 
-The Dockerfile works via a fresh clone, no pre-build or npm install is needed. It can be tagged as follows:
+The front page for submelon.dev - a "link-in-bio" site of sorts, with other resources available for reference.
 
-```
-docker build --push -t registry.digitalocean.com/submelon-tech/submelon.tech:1.0.0 .
-```
+## Description
 
-(Reference authenticating to use DigitalOcean's Container Registry below.)
+This is a static site generated and enabled using GatsbyJS. All sources including CSS were produced solely by the author, Kevin Hoerr.
 
-If the build fails in error as a result of the image, the base gatsby images can be rebuilt. (The gatsby images as exist on Dockerhub do not work.) To rebuild those images, run the following commands:
+## History
 
-To note, the gatsby-docker repository is now out of date. A newer node image must be used.
+This was originally a purely static site (no JS/TS) that has morphed to permit use of newer technologies and integrations and for ease of updating. There are no server integrations outside of serving static assets. At present, this site does not make use of any scripting features to enable any actual front-end features, though the components are built in ReactJS and compiled using the GatsbyJS framework.
 
-```
-cd ..
-git clone https://github.com/gatsbyjs/gatsby-docker
-cd gatsby-docker
-# Change node:12-buster to node:lts-buster in Dockerfile.onbuild
-docker build -t gatsbyjs/gatsby:onbuild -f Dockerfile.onbuild .
-docker build -t gatsbyjs/gatsby:latest -f Dockerfile .
-```
+## Hosting
 
-And then attempt rebuild of the submelon.tech image.
+The site itself is served using DigitalOcean's App capabilities for static sites. This is a zero-cost service with automated deployments, as enabled by DigitalOcean and GitHub services and integrations.
 
-### Authenticating with DO
-
-Install `doctl`. Create an access token via DO's web interface to authenticate with the registry, and connect docker:
-
-```
-doctl auth init
-doctl registry login
-```
-
-### DO K8s Deployment
-
-To access the DO k8s cluster, save the config. It will automatically switch to use this context:
-
-```
-doctl k8s cluster cfg save k8s-1-13-1-do-2-nyc1-1547908941746
-```
-
-Then to switch to use this context in the future:
-
-```
-kubectl config use-context do-nyc1-k8s-1-13-1-do-2-nyc1-1547908941746
-```
-
-Make version/environment changes to deployment config file, and apply:
-
-```
-kubectl apply -f kubernetes/deployment.yaml
-```
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg)](https://www.digitalocean.com/?refcode=8da539b4e677&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
