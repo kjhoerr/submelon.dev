@@ -20,7 +20,6 @@ jobs:
       with:
         githubToken: ${{ secrets.GITHUB_TOKEN }}
         pattern: public/
-        trustedAuthors: kjhoerr
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
