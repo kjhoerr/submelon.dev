@@ -16,8 +16,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Check changes (prevent pushing to public/)
-      run: |
-        [[ -z "$(git diff --raw HEAD^ -- public/)" ]]
+      uses: xalvarez/prevent-file-change-action@v1
+      with:
+        githubToken: ${{ secrets.GITHUB_TOKEN }}
+        pattern: public/
+        trustedAuthors: kjhoerr
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
