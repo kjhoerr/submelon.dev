@@ -25,7 +25,7 @@ jobs:
     - name: Run Gatsby Build
       run: npm run build --if-present
     - name: Commit public changes
-      uses: actions-js/push@latest
+      uses: actions-js/push@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: trunk
