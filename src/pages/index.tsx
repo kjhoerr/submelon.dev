@@ -5,7 +5,9 @@ import { FaGithub, FaMastodon } from "react-icons/fa";
 import BlockLink from "../components/BlockLink";
 import Footer from "../components/Footer";
 import { BlockBody, BlockHeader, Content } from "../styles";
-import { version } from "../../package.json";
+import package_json from "../../package.json";
+
+const VERSION = package_json.version;
 
 // markup
 const IndexPage = (): React.ReactElement => {
@@ -31,14 +33,16 @@ const IndexPage = (): React.ReactElement => {
           </p>
           <p>
             My most recent projects have been focused on full-stack development.
-            I use Kubernetes for orchestration, NextJS for front-end, and
-            rust+actix-web for my backend services with GraphQL serving as the
+            I use Kubernetes for orchestration and NextJS for the front-end. For
+            back-end development, I have built services enabled by Java with
+            Spring Boot, Quarkus, and rust+actix-web with a GraphQL serving
             public API.
           </p>
           <p>
-            This site was recently rebuilt using GatsbyJS since the instance
-            formerly holding this website broke during upgrades. Thank goodness
-            for backups.
+            I run a personal Kubernetes cluster at home using MicroOS and k3d. I
+            have also run multiple clusters via DigitalOcean with deployments
+            dedicated for hosting git projects, CI/CD, and code coverage. Since
+            then all projects have been moved to GitHub.
           </p>
           <em>- Kevin H.</em>
         </BlockBody>
@@ -60,7 +64,7 @@ const IndexPage = (): React.ReactElement => {
         </BlockLink>
       </Content>
 
-      <Footer timestamp={version} />
+      <Footer timestamp={VERSION} />
     </main>
   );
 };
