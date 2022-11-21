@@ -31,7 +31,7 @@ export function toShort(valu: number): string {
 }
 
 /**
- * Translates a Unix EPOCH timestamp to a 62-digit expression of the date. See
+ * Translates a Unix EPOCH timestamp to a 62-char expression of the date. See
  * the `toShort()` method for more details on the meaning of the final output.
  */
 export function getTimestamp(seconds: number): string {
