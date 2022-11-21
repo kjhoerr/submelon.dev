@@ -12,6 +12,10 @@ This is a static site generated and enabled using GatsbyJS. All sources includin
 
 This was originally a purely static site (no JS/TS) that has morphed to permit use of newer technologies and integrations and for ease of updating. There are no server integrations outside of serving static assets. At present, this site does not make use of any scripting features to enable any actual front-end features, though the components are built in ReactJS and compiled using the GatsbyJS framework.
 
+## License
+
+This project is licensed under [the Blue Oak Model License 1.0.0](LICENSE.md).
+
 ## Hosting
 
 The site itself is served using DigitalOcean's App capabilities for static sites. This is a zero-cost service with automated deployments, as enabled by DigitalOcean and GitHub services and integrations.
