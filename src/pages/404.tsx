@@ -1,7 +1,6 @@
 import React from "react";
 import { BlockLink, Layout } from "../components";
 import { BlockBody, BlockHeader } from "../styles";
-import "../styles/main.css";
 
 const NotFoundPage = (): React.ReactElement => {
   return (
