@@ -1,6 +1,5 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import "../styles/main.css";
 import { FaGithub, FaMastodon } from "react-icons/fa";
 import { BlockLink, Layout } from "../components";
 import { BlockBody, BlockHeader } from "../styles";

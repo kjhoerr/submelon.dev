@@ -4,6 +4,8 @@ import { Content, Footer } from "../styles";
 import package_json from "../../package.json";
 import { getTimestamp } from "../util/timestamp";
 
+import "../styles/main.css";
+
 const VERSION = package_json.version;
 
 const Layout = ({ children }) => {
