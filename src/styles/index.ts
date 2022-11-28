@@ -4,4 +4,6 @@ import BlockHeader from "./BlockHeader";
 import Content from "./Content";
 import Footer from "./Footer";
 
-export { BlockAnchor, BlockBody, BlockHeader, Content, Footer };
+type Theme = Record<string, never>;
+
+export { BlockAnchor, BlockBody, BlockHeader, Content, Footer, Theme };

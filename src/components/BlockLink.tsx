@@ -1,7 +1,12 @@
 import React from "react";
-import { BlockAnchor, BlockBody } from "../styles";
+import { ThemedStyledFunction } from "styled-components";
+import { BlockAnchor, BlockBody, Theme } from "../styles";
 
-const BlockLink = ({ children, ...attributes }) => {
+type BlockLinkProps = {
+  children: React.ReactNode;
+} & ThemedStyledFunction<"a", Theme>;
+
+const BlockLink = ({ children, ...attributes }: BlockLinkProps) => {
   return (
     <BlockBody theme={{ link: true }}>
       <BlockAnchor {...attributes}>{children}</BlockAnchor>
