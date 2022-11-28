@@ -30,7 +30,15 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-csp",
+    {
+      resolve: "gatsby-plugin-csp",
+      options: {
+        directives: {
+          "script-src": "'self' 'unsafe-inline'",
+          "style-src": "'self' 'unsafe-inline'",
+        },
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
