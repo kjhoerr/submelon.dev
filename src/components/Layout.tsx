@@ -1,14 +1,13 @@
 import React from "react";
 import { IconContext } from "react-icons/lib";
 import { Content, Footer } from "../styles";
-import package_json from "../../package.json";
+import { useSiteVersion } from "../hooks";
 import { getTimestamp } from "../util/timestamp";
 
 import "../styles/main.css";
 
-const VERSION = package_json.version;
-
 const Layout = ({ children }) => {
+  const version = useSiteVersion();
   return (
     <React.StrictMode>
       <main>
@@ -20,7 +19,7 @@ const Layout = ({ children }) => {
           <Footer>
             <span>
               &copy;2022 kjhoerr@https://submelon.dev/:
-              {getTimestamp(Number(VERSION))}
+              {getTimestamp(Number(version))}
             </span>
           </Footer>
         </IconContext.Provider>

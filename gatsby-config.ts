@@ -1,4 +1,11 @@
 module.exports = {
+  siteMetadata: {
+    title: "Kevin J Hoerr <kjhoerr@submelon.tech>",
+    description: "The official website of Kevin Hoerr, developer of websites.",
+    author: "Kevin J Hoerr",
+    version: "1669668242",
+  },
+  graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
