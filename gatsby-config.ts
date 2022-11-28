@@ -30,6 +30,7 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-csp",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
