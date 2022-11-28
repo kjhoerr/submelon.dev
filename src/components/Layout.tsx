@@ -6,7 +6,11 @@ import { getTimestamp } from "../util/timestamp";
 
 import "../styles/main.css";
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   const version = useSiteVersion();
   return (
     <React.StrictMode>
