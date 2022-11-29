@@ -21,8 +21,8 @@ const IndexPage = (): React.ReactElement => {
       <BlockBody>
         <p>
           I&apos;m a computer science and math graduate from Millersville
-          University. I work as an IT consultant and specialize in development
-          operations and systems validation for web applications.
+          University. I work as a Solutions Architect and specialize in
+          development operations and systems validation for web applications.
         </p>
         <p>
           My most recent projects have been focused on full-stack development. I
