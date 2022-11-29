@@ -1,10 +1,10 @@
 import React from "react";
-import { ThemedStyledFunction } from "styled-components";
-import { BlockAnchor, BlockBody, Theme } from "../styles";
+import { BlockAnchor, BlockBody } from "../styles";
 
 type BlockLinkProps = {
-  children: React.ReactNode;
-} & ThemedStyledFunction<"a", Theme>;
+  children?: React.ReactNode;
+  as?: undefined;
+} & React.LinkHTMLAttributes<HTMLAnchorElement>;
 
 const BlockLink = ({ children, ...attributes }: BlockLinkProps) => {
   return (
