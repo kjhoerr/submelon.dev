@@ -3,7 +3,7 @@ module.exports = {
     title: "Kevin J Hoerr <kjhoerr@submelon.tech>",
     description: "The official website of Kevin Hoerr, developer of websites.",
     author: "Kevin J Hoerr",
-    version: "1671457987",
+    version: "1671458147",
   },
   graphqlTypegen: true,
   plugins: [
