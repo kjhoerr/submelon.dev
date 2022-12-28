@@ -15,6 +15,25 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Get changed files under src directory
+      uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        filters: |
+          source:
+            - 'src/**'
+
+    - name: Get current date
+      id: date
+      run: echo "DATE_VERSION=$(date +'%s')" >> $GITHUB_OUTPUT
+    - name: Modify version number
+      uses: mingjun97/file-regex-replace@v1
+      if: steps.filter.outputs.source == 'true'
+      with:
+        regex: 'version: "[0-9]*",'
+        replacement: 'version: "${{ steps.date.outputs.DATE_VERSION }}",'
+        include: 'gatsby-config\.ts'
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
@@ -22,24 +41,6 @@ jobs:
         cache: 'npm'
     - name: Install Node.js packages
       run: npm ci
-
-    - name: Get current date
-      id: date
-      run: echo "::set-output name=date::$(date +'%s')"
-    - uses: dorny/paths-filter@v2
-      id: filter
-      with:
-        filters: |
-          source:
-            - 'src/**'
-    # modify version number if actual source files changed
-    - name: Modify version number
-      uses: mingjun97/file-regex-replace@v1
-      if: steps.filter.outputs.source == 'true'
-      with:
-        regex: 'version: "[0-9]*",'
-        replacement: 'version: "${{ steps.date.outputs.date }}",'
-        include: 'gatsby-config\.ts'
 
     - name: Clean Gatsby cache
       run: npm run clean
