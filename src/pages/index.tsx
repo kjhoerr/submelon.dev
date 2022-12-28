@@ -25,17 +25,23 @@ const IndexPage = (): React.ReactElement => {
           development operations and systems validation for web applications.
         </p>
         <p>
-          My most recent projects have been focused on full-stack development. I
-          use Kubernetes for orchestration and NextJS for the front-end. For
-          back-end development, I have built services enabled by Java with
-          Spring Boot, Quarkus, and rust+actix-web with a GraphQL serving public
-          API.
+          During my time at Millersville I was the lead Linux admin for the
+          Cyber Defense Organization (CDO). In addition to constructing a new
+          computer lab for our efforts, we participated in NCL and MACCDC.
         </p>
         <p>
-          I run a personal Kubernetes cluster at home using MicroOS and k3d. I
-          have also run multiple clusters via DigitalOcean with deployments
-          dedicated for hosting git projects, CI/CD, and code coverage. Since
-          then all projects have been moved to GitHub.
+          Most of my development experience is focused around full stack
+          development. For the front-end I use TypeScript and ReactJS using
+          create-react-app or NextJS. For back-end systems I have experience
+          using Java with Spring Boot and rust with actix-web. To mediate APIs I
+          have used Apache Kafka, OpenAPI, and GraphQL.
+        </p>
+        <p>
+          My free time is spent around general computing hobbies. When I&apos;m
+          not trying out new application frameworks I am fiddling around with
+          Guix or NixOS. I run a kubernetes cluster at home to manage, maintain,
+          and secure my personal network in conjunction with experimenting with
+          distributed workloads.
         </p>
         <em>- Kevin H.</em>
       </BlockBody>
