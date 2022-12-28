@@ -19,6 +19,8 @@ const SHORT_CHARS =
  * 48 = M
  *
  * 2022 = km (in base-62 this would be wC)
+ *
+ * @deprecated {@link encodeBase62} is now used to generate the timestamp instead
  */
 export function toShort(valu: number): string {
   return (
@@ -28,6 +30,21 @@ export function toShort(valu: number): string {
       ?.map((s) => SHORT_CHARS[parseInt(s)])
       .join("") ?? ""
   );
+}
+
+/**
+ * Encodes a number as a base-62 value string.
+ */
+export function encodeBase62(valu: number): string {
+  let res = "";
+  const mod = 62;
+
+  while (valu > 0) {
+    res = SHORT_CHARS[valu % mod] + res;
+    valu = Math.floor(valu / mod);
+  }
+
+  return res;
 }
 
 /**
@@ -44,5 +61,5 @@ export function getTimestamp(seconds: number): string {
     date.getUTCMinutes(),
   ];
 
-  return dateArr.map(toShort).join(".") + "-0";
+  return dateArr.map(encodeBase62).join(".") + "-0";
 }
