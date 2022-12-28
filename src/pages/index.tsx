@@ -11,7 +11,7 @@ const IndexPage = (): React.ReactElement => {
         <StaticImage
           src="../images/main.png"
           alt="Picture of Kevin Hoerr"
-          placeholder="tracedSVG"
+          placeholder="blurred"
           layout="fixed"
           width={350}
           height={350}
