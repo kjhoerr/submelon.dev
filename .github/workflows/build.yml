@@ -31,7 +31,7 @@ jobs:
       with:
         filters: |
           source:
-            - '.src/**'
+            - 'src/**'
     # modify version number if actual source files changed
     - name: Modify version number
       uses: mingjun97/file-regex-replace@v1
