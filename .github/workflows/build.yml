@@ -35,7 +35,7 @@ jobs:
     # modify version number if actual source files changed
     - name: Modify version number
       uses: mingjun97/file-regex-replace@v1
-      if: steps.filter.outputs.source == "true"
+      if: steps.filter.outputs.source == 'true'
       with:
         regex: 'version: "[0-9]*",'
         replacement: 'version: "${{ steps.date.outputs.date }}",'
