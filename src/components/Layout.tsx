@@ -22,7 +22,7 @@ const Layout = ({ children }: LayoutProps) => {
 
           <Footer>
             <span>
-              &copy;2022 kjhoerr@https://submelon.dev/:
+              &copy;2023 kjhoerr@https://submelon.dev/:
               {getTimestamp(Number(version))}
             </span>
           </Footer>
