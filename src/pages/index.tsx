@@ -32,9 +32,9 @@ const IndexPage = (): React.ReactElement => {
         <p>
           Most of my development experience is focused around full stack
           development. For the front-end I use TypeScript and ReactJS using
-          create-react-app or NextJS. For back-end systems I have used Java with
-          Spring Boot and rust with actix-web extensively. To mediate APIs I
-          have used Apache Kafka, OpenAPI, and GraphQL.
+          create-react-app or NextJS. For back-end systems I have used both Java
+          with Spring Boot and rust with actix-web extensively. To mediate APIs
+          I have used Apache Kafka, OpenAPI, and GraphQL.
         </p>
         <p>
           My free time is spent engaging in general computing hobbies. When
@@ -53,16 +53,10 @@ const IndexPage = (): React.ReactElement => {
         <FaGithub /> kjhoerr on GitHub
       </BlockLink>
       <BlockLink
-        href="https://github.com/kjhoerr/submelon.dev"
-        aria-label="The submelon.dev source code repository"
-      >
-        <FaCode /> Submelon.dev repo
-      </BlockLink>
-      <BlockLink
         href="https://github.com/kjhoerr/pantry"
         aria-label="Source code repository of Kevin's current pet project Pantry"
       >
-        <FaCode /> Pet project: Pantry
+        <FaCode /> Pantry (pet project)
       </BlockLink>
       <BlockLink
         href="https://cybr.es/@kjhoerr"
