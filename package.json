@@ -18,7 +18,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "lint": "eslint src --ext ts --ext tsx --ext js --ext jsx"
+    "lint": "eslint src --ext ts --ext tsx --ext js --ext jsx",
+    "postinstall": "badgen -j \"Last Publish\" -s \"$(date --date=\"@$(cat gatsby-config.ts | grep 'version' | grep -oe '[0-9]*')\" -I)\" -c blue > public/publish-badge.svg"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
@@ -44,6 +45,7 @@
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.49.0",
+    "badgen-cli": "^0.2.0",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
