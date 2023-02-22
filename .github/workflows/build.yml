@@ -46,6 +46,8 @@ jobs:
       run: npm run clean
     - name: Run Gatsby Build
       run: npm run build --if-present
+    - name: Run post-build
+      run: npm run post-build
     - name: Commit public changes
       uses: actions-js/push@master
       with:
