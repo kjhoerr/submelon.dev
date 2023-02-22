@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { FaGithub, FaMastodon } from "react-icons/fa";
+import { FaCode, FaGithub, FaMastodon } from "react-icons/fa";
 import { BlockLink, Layout } from "../components";
 import { BlockBody, BlockHeader } from "../styles";
 
@@ -32,32 +32,38 @@ const IndexPage = (): React.ReactElement => {
         <p>
           Most of my development experience is focused around full stack
           development. For the front-end I use TypeScript and ReactJS using
-          create-react-app or NextJS. For back-end systems I have experience
-          using Java with Spring Boot and rust with actix-web. To mediate APIs I
-          have used Apache Kafka, OpenAPI, and GraphQL.
+          create-react-app or NextJS. For back-end systems I have used both Java
+          with Spring Boot and rust with actix-web extensively. To mediate APIs
+          I have used Apache Kafka, OpenAPI, and GraphQL.
         </p>
         <p>
-          My free time is spent around general computing hobbies. When I&apos;m
-          not trying out new application frameworks I am fiddling around with
-          Guix or NixOS. I run a kubernetes cluster at home to manage, maintain,
-          and secure my personal network in conjunction with experimenting with
-          distributed workloads.
+          My free time is spent engaging in general computing hobbies. When
+          I&apos;m not trying out new application frameworks, I am fiddling
+          around with Guix or NixOS. I run a kubernetes cluster at home to
+          manage, maintain, and secure my personal network as well as
+          experimenting with distributed workloads.
         </p>
         <em>- Kevin H.</em>
       </BlockBody>
-      <BlockLink
-        href="https://cybr.es/@kjhoerr"
-        rel="me"
-        aria-label="My Mastodon account"
-      >
-        <FaMastodon /> @kjhoerr@cybr.es
-      </BlockLink>
       <BlockLink
         href="https://github.com/kjhoerr"
         rel="me"
         aria-label="My GitHub account with my most active personal projects"
       >
         <FaGithub /> kjhoerr on GitHub
+      </BlockLink>
+      <BlockLink
+        href="https://github.com/kjhoerr/pantry"
+        aria-label="Source code repository of Kevin's current pet project Pantry"
+      >
+        <FaCode /> Pantry (pet project)
+      </BlockLink>
+      <BlockLink
+        href="https://cybr.es/@kjhoerr"
+        rel="me"
+        aria-label="My Mastodon account"
+      >
+        <FaMastodon /> @kjhoerr@cybr.es
       </BlockLink>
     </Layout>
   );
