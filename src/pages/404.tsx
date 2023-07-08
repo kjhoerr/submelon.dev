@@ -7,11 +7,10 @@ const NotFoundPage = (): React.ReactElement => {
     <Layout>
       <BlockHeader>Not found</BlockHeader>
       <BlockBody>
-        Sorry{" "}
+        Sorry! We couldn&apos;t find what you were looking for
         <span role="img" aria-label="Pensive emoji">
           😔
-        </span>{" "}
-        we couldn&apos;t find what you were looking for.
+        </span>
       </BlockBody>
       <BlockLink href="/" aria-label="Return to the front page">
         Home
