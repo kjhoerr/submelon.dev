@@ -39,10 +39,10 @@ export function encodeBase62(valu: number): string {
   let res = "";
   const mod = 62;
 
-  while (valu > 0) {
+  do {
     res = SHORT_CHARS[valu % mod] + res;
     valu = Math.floor(valu / mod);
-  }
+  } while (valu > 0);
 
   return res;
 }
@@ -55,7 +55,7 @@ export function getTimestamp(seconds: number): string {
   const date = new Date(seconds * 1000);
   const dateArr = [
     date.getUTCFullYear(),
-    date.getUTCMonth(),
+    date.getUTCMonth() + 1, // UTC month starts at 0
     date.getUTCDate(),
     date.getUTCHours(),
     date.getUTCMinutes(),
