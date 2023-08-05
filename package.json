@@ -46,7 +46,7 @@
     "@typescript-eslint/parser": "^5.62.0",
     "badgen-cli": "^0.2.0",
     "eslint": "^8.46.0",
-    "eslint-config-prettier": "^8.9.0",
+    "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.1",
     "typescript": "latest"
