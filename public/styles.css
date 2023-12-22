@@ -68,6 +68,11 @@ article {
   padding-top: 136px;
 }
 
+article > picture {
+  width: 350px;
+  height: 350px;
+}
+
 section {
   background-color: #fff;
   border: 1px #000 solid;
