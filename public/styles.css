@@ -154,11 +154,7 @@ footer > span {
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #424242;
-    background-image: none;
-    background-repeat: repeat;
-    font-display: serif;
-    font-family: Merriweather, serif;
-    font-size: 16px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAAltJREFUeF7t3cuKwzAMheHprs/VZd//YbqbIS10CLk5sSTr8mfvYPOBQPIhuT2fz98f4ef1egm/0d/r7ve7yqZu0iBg9DmJgoDRhzGtFgMBox9DDAQMGQwREDDkMLpBwJDF6AIBQx7jMggYOhiXQMDQwzgNAoYuxikQMPQxmkHAsMFoAgHDDuMQBAxbjF0QMOwxNkHAGIOxCgLGOIwFCBhjMWYgYIzH+IKA4QPjDfJ4PMRDDn6O99mJViBB45zpQSJhTJUqNUg0jNQlKyJGWpCoGClBImOkA4mOkQokA0YakCwYKUAyYYQHyYYRGiQjRliQrBghQTJjhAPJjhEKpAJGGJAqGCFAKmG4B6mG4RqkIoZbkKoYLkEqY7gDqY7hCgSMT6jIReoEjP+E13AQMOZxu6EgYCyzj8NAwFgPog4BAWM7FWwOAsZ+RNsUBIzjvLwZCBjHGGZ9CBhtGCYgYLRjqIOAcQ5DFQSM8xhqIGBcw1ABAeM6hjgIGH0YoiBg9GOIgYAhgyECAoYcRjcIGLIYXSBgyGNcBgFDB+MSCBh6GKdBwNDFOAUChj5GMwgYNhhNIGDYYRyCgGGLsQsChj3GJggYYzBWQcAYh7EAAWMsxgwEjPEYXxAwfGC8QaR/Tqx5tApf4A4DUgFjqlQhQKpghChZlTDcg1TDcA1SEcMtSFUMlyCVMdyBVMdwBQLGp6V20YeA8T/fGA4CxnzYNBQEjOXkbxgIGOtj2CEgYGzPxM1BwNi/oDAFAeP4tsgMBIxjDLM+BIw2DBMQMNox1EHAOIehCgLGeYxpxR8MpN5wf4mWVQAAAABJRU5ErkJggg==);
     color: #ddd;
   }
 
@@ -166,8 +162,10 @@ footer > span {
   p > a:hover,
   p > a:visited {
     color: #fff;
-    padding: 1px 3px;
-    text-decoration: none;
+  }
+
+  i.icon {
+    filter: invert(77%) sepia(0%) saturate(0%) hue-rotate(26deg) brightness(88%) contrast(92%);
   }
   
   section {
