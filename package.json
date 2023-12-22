@@ -10,9 +10,12 @@
     "url": "https://github.com/kjhoerr/submelon.dev.git"
   },
   "scripts": {
+    "serve": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
     "post-build": "badgen -j \"Last Publish\" -s \"$(date --date=\"@$(cat gatsby-config.ts | grep 'version' | grep -oe '[0-9]*')\" -I)\" -c blue > public/publish-badge.svg"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
     "badgen-cli": "^0.2.0"
   }
 }
