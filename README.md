@@ -6,11 +6,7 @@ A "link-in-bio" site of sorts, with other resources available for reference.
 
 ## Description
 
-This is a static site generated and enabled using GatsbyJS. All sources including CSS were produced solely by the author, Kevin Hoerr.
-
-## History
-
-This was originally a purely static site (no JS/TS) that has morphed to permit use of newer technologies and integrations for the ease of updating. There are no server integrations outside of serving static assets. At present, this site does not make use of any scripting features to enable any actual front-end features. The components are built in ReactJS and compiled using the GatsbyJS framework.
+This is a static site that is not generated (anymore). All sources except for the brand icons were produced solely by the author, Kevin Hoerr.
 
 ## License
 

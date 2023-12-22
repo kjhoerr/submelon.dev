@@ -15,13 +15,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Get changed files under src directory
+    - name: Get changed files under public directory
       uses: dorny/paths-filter@v2
       id: filter
       with:
         filters: |
           source:
-            - 'src/**'
+            - 'public/**'
 
     - name: Get current date
       id: date
