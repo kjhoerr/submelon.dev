@@ -1,4 +1,4 @@
-import { getTimestamp } from "./util/timestamp";
+import { formatDate, getTimestamp } from "./util/timestamp";
 import BuildInfo from "../config.json";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -9,9 +9,13 @@ export default function (eleventyConfig: any) {
   });
 
   // hook in configured build time for GH action to update
+  eleventyConfig.addGlobalData("site", () => BuildInfo);
   eleventyConfig.addGlobalData("buildTimeEncoded", () => {
     return getTimestamp(Number(BuildInfo.version));
   });
+
+  // add `date` filter
+  eleventyConfig.addFilter("formatDate", formatDate);
 
   // ensure eleventy marks this config as watched, since it's typescript
   eleventyConfig.addWatchTarget("./src/config.ts");
