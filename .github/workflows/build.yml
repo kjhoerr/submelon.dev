@@ -30,8 +30,8 @@ jobs:
       if: steps.filter.outputs.source == 'true'
       uses: jacobtomlinson/gha-find-replace@v3
       with:
-        find: '"version": "[0-9]*",'
-        replace: '"version": "${{ steps.date.outputs.DATE_VERSION }}",'
+        find: '"version": "[0-9]*"'
+        replace: '"version": "${{ steps.date.outputs.DATE_VERSION }}"'
         include: 'config.json'
 
     - name: Use Node.js ${{ matrix.node-version }}
