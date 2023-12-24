@@ -1,14 +1,14 @@
 <svg width="151.8" height="20" viewBox="0 0 1518 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Last Publish: 2023-12-24">
   <title>Last Publish: 2023-12-24</title>
-  <linearGradient id="Qsvrd" x2="0" y2="100%">
+  <linearGradient id="NZhXe" x2="0" y2="100%">
     <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
     <stop offset="1" stop-opacity=".1"/>
   </linearGradient>
-  <mask id="lgxOJ"><rect width="1518" height="200" rx="30" fill="#FFF"/></mask>
-  <g mask="url(#lgxOJ)">
+  <mask id="wIFkD"><rect width="1518" height="200" rx="30" fill="#FFF"/></mask>
+  <g mask="url(#wIFkD)">
     <rect width="758" height="200" fill="#555"/>
     <rect width="760" height="200" fill="#08C" x="758"/>
-    <rect width="1518" height="200" fill="url(#Qsvrd)"/>
+    <rect width="1518" height="200" fill="url(#NZhXe)"/>
   </g>
   <g aria-hidden="true" fill="#fff" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
     <text x="60" y="148" textLength="658" fill="#000" opacity="0.25">Last Publish</text>
