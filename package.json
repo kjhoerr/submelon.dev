@@ -9,14 +9,20 @@
     "type": "git",
     "url": "https://github.com/kjhoerr/submelon.dev.git"
   },
-  "scripts": {
-    "serve": "npx @11ty/eleventy --serve",
-    "clean": "rm -rf public/*", 
+  "scripts": { 
     "build": "npm run clean && npx @11ty/eleventy",
-    "post-build": "badgen -j \"Last Publish\" -s \"$(date --date=\"@$(cat config.json | grep 'version' | grep -oe '[0-9]*')\" -I)\" -c blue > publish-badge.svg"
+    "clean": "rm -rf public/*",
+    "format": "prettier -w src",
+    "lint": "eslint src --ext js",
+    "post-build": "badgen -j \"Last Publish\" -s \"$(date --date=\"@$(cat config.json | grep 'version' | grep -oe '[0-9]*')\" -I)\" -c blue > publish-badge.svg",
+    "serve": "npx @11ty/eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "badgen-cli": "^0.2.0"
+    "badgen-cli": "^0.2.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.1",
+    "prettier": "^3.1.1"
   }
 }
