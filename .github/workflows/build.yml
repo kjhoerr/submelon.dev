@@ -30,9 +30,9 @@ jobs:
       uses: mingjun97/file-regex-replace@v1
       if: steps.filter.outputs.source == 'true'
       with:
-        regex: 'version: "[0-9]*",'
-        replacement: 'version: "${{ steps.date.outputs.DATE_VERSION }}",'
-        include: 'gatsby-config\.ts'
+        regex: '"version": "[0-9]*",'
+        replacement: '"version": "${{ steps.date.outputs.DATE_VERSION }}",'
+        include: 'config\.json'
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -42,10 +42,8 @@ jobs:
     - name: Install Node.js packages
       run: npm ci
 
-    - name: Clean Gatsby cache
-      run: npm run clean
-    - name: Run Gatsby Build
-      run: npm run build --if-present
+    - name: Run Eleventy Build
+      run: npm run build
     - name: Run post-build
       run: npm run post-build
     - name: Commit public changes

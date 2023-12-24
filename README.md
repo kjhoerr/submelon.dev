@@ -1,16 +1,12 @@
 # [submelon.dev](https://submelon.dev)
 
-[![submelon.dev build](https://github.com/kjhoerr/submelon.dev/actions/workflows/build.yml/badge.svg)](https://github.com/kjhoerr/submelon.dev/actions/workflows/build.yml) [![License: BlueOak 1.0.0](https://img.shields.io/badge/License-BlueOak_1.0.0-green.svg)](https://blueoakcouncil.org/license/1.0.0) ![Date of last publish](public/publish-badge.svg)
+[![submelon.dev build](https://github.com/kjhoerr/submelon.dev/actions/workflows/build.yml/badge.svg)](https://github.com/kjhoerr/submelon.dev/actions/workflows/build.yml) [![License: BlueOak 1.0.0](https://img.shields.io/badge/License-BlueOak_1.0.0-green.svg)](https://blueoakcouncil.org/license/1.0.0) ![Date of last publish](publish-badge.svg)
 
 A "link-in-bio" site of sorts, with other resources available for reference.
 
 ## Description
 
-This is a static site generated and enabled using GatsbyJS. All sources including CSS were produced solely by the author, Kevin Hoerr.
-
-## History
-
-This was originally a purely static site (no JS/TS) that has morphed to permit use of newer technologies and integrations for the ease of updating. There are no server integrations outside of serving static assets. At present, this site does not make use of any scripting features to enable any actual front-end features. The components are built in ReactJS and compiled using the GatsbyJS framework.
+This is a static site that is not generated (anymore). All sources except for the brand icons were produced solely by the author, Kevin Hoerr.
 
 ## License
 

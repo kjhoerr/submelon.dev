@@ -1,6 +1,6 @@
 {
   "name": "submelon.dev",
-  "version": "1.0.x",
+  "version": "2.0.x",
   "private": true,
   "description": "submelon.dev",
   "author": "Kevin J Hoerr",
@@ -9,46 +9,24 @@
     "type": "git",
     "url": "https://github.com/kjhoerr/submelon.dev.git"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
+    "build": "npm run clean && npx @11ty/eleventy",
+    "clean": "rm -rf public/*",
+    "format": "prettier -w src",
     "lint": "eslint src --ext ts --ext tsx --ext js --ext jsx",
-    "post-build": "badgen -j \"Last Publish\" -s \"$(date --date=\"@$(cat gatsby-config.ts | grep 'version' | grep -oe '[0-9]*')\" -I)\" -c blue > public/publish-badge.svg"
-  },
-  "dependencies": {
-    "babel-plugin-styled-components": "^2.1.4",
-    "gatsby": "5.12.12",
-    "gatsby-plugin-html-attributes": "^1.0.5",
-    "gatsby-plugin-image": "3.13.0",
-    "gatsby-plugin-manifest": "5.13.0",
-    "gatsby-plugin-offline": "^6.12.3",
-    "gatsby-plugin-sharp": "5.12.3",
-    "gatsby-plugin-styled-components": "6.12.0",
-    "gatsby-source-filesystem": "5.13.0",
-    "gatsby-transformer-sharp": "5.12.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.12.0",
-    "styled-components": "^6.1.1"
+    "post-build": "badgen -j \"Last Publish\" -s \"$(date --date=\"@$(cat config.json | grep 'version' | grep -oe '[0-9]*')\" -I)\" -c blue > publish-badge.svg",
+    "serve": "npx @11ty/eleventy --serve"
   },
   "devDependencies": {
-    "@types/node": "^20.10.5",
-    "@types/react": "^18.2.40",
-    "@types/react-dom": "^18.2.18",
-    "@types/react-icons": "^3.0.0",
+    "@11ty/eleventy": "^2.0.1",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "badgen-cli": "^0.2.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.1",
-    "eslint-plugin-react": "^7.33.2",
-    "typescript": "latest"
+    "prettier": "^3.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   }
 }
