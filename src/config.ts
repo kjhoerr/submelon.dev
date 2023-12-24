@@ -27,15 +27,11 @@ export default function (config: any) {
 		let url = metadata.png?.[0].url ?? "";
 
 		return `<picture>
-			${Object.values(metadata).map(imageFormat => {
-				return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
-			}).join("\n")}
-				<img
-					src="${url}"
-					width="${width}"
-					height="${height ?? width}"
-					alt="${alt}">
-			</picture>`;
+${Object.values(metadata).map(imageFormat => {
+	return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
+}).join("\n")}
+  <img src="${url}" width="${width}" height="${height ?? width}" alt="${alt}">
+</picture>`;
 	});
 
   // add `date` filter
