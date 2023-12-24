@@ -4,8 +4,16 @@
 	"features": {
 		"ghcr.io/devcontainers/features/docker-from-docker:1": {}
 	},
+	
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ginfuru.better-nunjucks"
+			]
+		}
+	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm install"
+	"postCreateCommand": "yarn install"
 
 }
