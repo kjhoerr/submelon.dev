@@ -13,7 +13,7 @@
     "build": "npm run clean && npx @11ty/eleventy",
     "clean": "rm -rf public/*",
     "format": "prettier -w src",
-    "lint": "eslint src --ext js",
+    "lint": "eslint src --ext ts --ext tsx --ext js --ext jsx",
     "post-build": "badgen -j \"Last Publish\" -s \"$(date --date=\"@$(cat config.json | grep 'version' | grep -oe '[0-9]*')\" -I)\" -c blue > publish-badge.svg",
     "serve": "npx @11ty/eleventy --serve"
   },
