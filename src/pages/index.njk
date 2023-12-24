@@ -1,10 +1,7 @@
 ---
 layout: layouts/page.njk
 ---
-<picture>
-  <source type="image/webp" srcSet="images/main.webp 650w" sizes="350px" height="350" width="350"/>
-  <img src="images/main.png" sizes="350px" height="350" width="350" alt="Picture of Kevin Hoerr"/>
-</picture>
+{% image "src/images/main.png", "Picture of Kevin Hoerr", "350px", "350" %}
 <section><h1>Hello!</h1></section>
 <section>
   <p>I&apos;m a computer science and math graduate from Millersville University. I work as a Solutions Architect and specialize in development operations and systems validation for web applications.</p>
