@@ -6,7 +6,7 @@ A "link-in-bio" site of sorts, with other resources available for reference.
 
 ## Description
 
-This is a static site that is generated using [11ty.dev](https://www.11ty.dev/). All sources except for the brand icons were produced solely by the author, Kevin Hoerr.
+This is a static site that is generated using [11ty.dev](https://www.11ty.dev/). All sources except for the brand icons were produced solely by the author, Kevin Hoerr. The icons are created by [FontAwesome](https://fontawesome.com/) and are stored in this repository to reduce remote dependencies.
 
 ## License
 
