@@ -6,9 +6,13 @@ export default function (eleventyConfig: any) {
   eleventyConfig.addPassthroughCopy({
     "./src/static/": "/",
   });
+
+  // hook in configured build time for GH action to update
   eleventyConfig.addGlobalData("buildTimeEncoded", () => {
     return getTimestamp(Number(BuildInfo.version));
   });
+
+  // ensure eleventy marks this config as watched, since it's typescript
   eleventyConfig.addWatchTarget("./src/config.ts");
 
   return {
