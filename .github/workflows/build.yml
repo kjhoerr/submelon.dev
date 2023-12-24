@@ -32,7 +32,7 @@ jobs:
       with:
         regex: '"version": "[0-9]*",'
         replacement: '"version": "${{ steps.date.outputs.DATE_VERSION }}",'
-        include: 'config.json'
+        include: 'config\.json'
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
