@@ -3,7 +3,7 @@ const buildInfo = require("./config.json");
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({
-        "./src/public/": "/",
+        "./src/static/": "/",
     });
     eleventyConfig.addGlobalData("buildTimeEncoded", () => {
         return timestamp.getTimestamp(buildInfo.version);
