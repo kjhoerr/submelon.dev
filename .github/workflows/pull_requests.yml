@@ -14,7 +14,7 @@ jobs:
         node-version: [18.x]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Check changes (prevent pushing to public/)
       uses: xalvarez/prevent-file-change-action@v1.5.1
       with:
