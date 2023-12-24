@@ -1,6 +1,6 @@
 # [submelon.dev](https://submelon.dev)
 
-[![submelon.dev build](https://github.com/kjhoerr/submelon.dev/actions/workflows/build.yml/badge.svg)](https://github.com/kjhoerr/submelon.dev/actions/workflows/build.yml) [![License: BlueOak 1.0.0](https://img.shields.io/badge/License-BlueOak_1.0.0-green.svg)](https://blueoakcouncil.org/license/1.0.0) ![Date of last publish](public/publish-badge.svg)
+[![submelon.dev build](https://github.com/kjhoerr/submelon.dev/actions/workflows/build.yml/badge.svg)](https://github.com/kjhoerr/submelon.dev/actions/workflows/build.yml) [![License: BlueOak 1.0.0](https://img.shields.io/badge/License-BlueOak_1.0.0-green.svg)](https://blueoakcouncil.org/license/1.0.0) ![Date of last publish](publish-badge.svg)
 
 A "link-in-bio" site of sorts, with other resources available for reference.
 

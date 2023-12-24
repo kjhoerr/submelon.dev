@@ -11,8 +11,9 @@
   },
   "scripts": {
     "serve": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy",
-    "post-build": "badgen -j \"Last Publish\" -s \"$(date --date=\"@$(cat gatsby-config.ts | grep 'version' | grep -oe '[0-9]*')\" -I)\" -c blue > public/publish-badge.svg"
+    "clean": "rm -rf public/*", 
+    "build": "npm run clean && npx @11ty/eleventy",
+    "post-build": "badgen -j \"Last Publish\" -s \"$(date --date=\"@$(cat config.json | grep 'version' | grep -oe '[0-9]*')\" -I)\" -c blue > publish-badge.svg"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
