@@ -45,6 +45,7 @@ jobs:
     - name: Run Eleventy Build
       run: npm run build
     - name: Run post-build
+      if: steps.filter.outputs.source == 'true'
       run: npm run post-build
     - name: Commit public changes
       uses: actions-js/push@master
