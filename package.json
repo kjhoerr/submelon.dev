@@ -14,7 +14,7 @@
     "clean": "rm -rf public/*",
     "format": "prettier -w src",
     "post-build": "badgen -j \"Last Publish\" -s \"$(date --date=\"@$(cat config.json | grep 'version' | grep -oe '[0-9]*')\" -I)\" -c blue > publish-badge.svg",
-    "serve": "npx @11ty/eleventy --serve"
+    "start": "npx @11ty/eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

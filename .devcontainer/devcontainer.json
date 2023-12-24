@@ -7,6 +7,12 @@
 	
 	"customizations": {
 		"vscode": {
+			"settings": {
+				"files.exclude": {
+					"**/.yarn": true,
+					"**/node_modules": true
+				}
+			},
 			"extensions": [
 				"ginfuru.better-nunjucks"
 			]
