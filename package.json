@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/kjhoerr/submelon.dev.git"
   },
-  "scripts": { 
+  "scripts": {
     "build": "npm run clean && npx @11ty/eleventy",
     "clean": "rm -rf public/*",
     "format": "prettier -w src",
@@ -23,6 +23,8 @@
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.1",
-    "prettier": "^3.1.1"
+    "prettier": "^3.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   }
 }

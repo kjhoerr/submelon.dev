@@ -1,24 +1,11 @@
-const timestamp = require("./src/util/timestamp");
-const buildInfo = require("./config.json");
+// @ts-check
+require("ts-node").register({
+  files: true,
+  compilerOptions: {
+    module: "commonjs",
+  },
+})
 
-module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy({
-        "./src/static/": "/",
-    });
-    eleventyConfig.addGlobalData("buildTimeEncoded", () => {
-        return timestamp.getTimestamp(buildInfo.version);
-    });
+const { default: eleventyConfig } = require("./src/config.ts")
 
-    return {
-		templateFormats: [
-			"njk",
-			"html",
-		],
-		htmlTemplateEngine: "njk",
-        dir: {
-            input: "src/pages",
-            includes: "../templates",
-            output: "public"
-        },
-    };
-};
+module.exports = eleventyConfig
