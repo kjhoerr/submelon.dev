@@ -68,5 +68,11 @@ export function getTimestamp(seconds: number): string {
  * Returns a date in the ISO-8601 format
  */
 export function formatDate(date: Date): string {
-  return date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
+  return (
+    date.getUTCFullYear() +
+    "-" +
+    (date.getUTCMonth() + 1) +
+    "-" +
+    date.getUTCDate()
+  );
 }

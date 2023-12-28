@@ -16,23 +16,36 @@ export default function (config: any) {
   });
 
   // images
-	config.addShortcode("image", async (src: string, alt: string, sizes: string, width: number, height: number | undefined) => {
-		let metadata = await Image(src, {
-			widths: [width, 550, "auto"],
-			formats: ["webp", "png"],
-      urlPath: "/images/",
-      outputDir: "./public/images/",
-		});
+  config.addShortcode(
+    "image",
+    async (
+      src: string,
+      alt: string,
+      sizes: string,
+      width: number,
+      height: number | undefined,
+    ) => {
+      let metadata = await Image(src, {
+        widths: [width, 550, "auto"],
+        formats: ["webp", "png"],
+        urlPath: "/images/",
+        outputDir: "./public/images/",
+      });
 
-		let url = metadata.png?.[0].url ?? "";
+      let url = metadata.png?.[0].url ?? "";
 
-		return `<picture>
-${Object.values(metadata).map(imageFormat => {
-	return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
-}).join("\n")}
+      return `<picture>
+${Object.values(metadata)
+  .map((imageFormat) => {
+    return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat
+      .map((entry) => entry.srcset)
+      .join(", ")}" sizes="${sizes}">`;
+  })
+  .join("\n")}
   <img src="${url}" width="${width}" height="${height ?? width}" alt="${alt}">
 </picture>`;
-	});
+    },
+  );
 
   // add `date` filter
   config.addFilter("formatDate", formatDate);
