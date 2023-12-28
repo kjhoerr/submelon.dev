@@ -1,5 +1,5 @@
 tr.topic-list-item.visited > td.main-link > span.link-top-line > a {
-  color: #aaa !important;
+  color: #878787 !important;
 }
 
 @media (prefers-color-scheme: dark) {
