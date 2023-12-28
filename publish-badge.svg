@@ -1,20 +1,20 @@
-<svg width="151.8" height="20" viewBox="0 0 1518 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Last Publish: 2023-12-24">
-  <title>Last Publish: 2023-12-24</title>
-  <linearGradient id="LuQWQ" x2="0" y2="100%">
+<svg width="151.8" height="20" viewBox="0 0 1518 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Last Publish: 2023-12-28">
+  <title>Last Publish: 2023-12-28</title>
+  <linearGradient id="KKWOs" x2="0" y2="100%">
     <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
     <stop offset="1" stop-opacity=".1"/>
   </linearGradient>
-  <mask id="uqouU"><rect width="1518" height="200" rx="30" fill="#FFF"/></mask>
-  <g mask="url(#uqouU)">
+  <mask id="WMOSv"><rect width="1518" height="200" rx="30" fill="#FFF"/></mask>
+  <g mask="url(#WMOSv)">
     <rect width="758" height="200" fill="#555"/>
     <rect width="760" height="200" fill="#08C" x="758"/>
-    <rect width="1518" height="200" fill="url(#LuQWQ)"/>
+    <rect width="1518" height="200" fill="url(#KKWOs)"/>
   </g>
   <g aria-hidden="true" fill="#fff" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
     <text x="60" y="148" textLength="658" fill="#000" opacity="0.25">Last Publish</text>
     <text x="50" y="138" textLength="658">Last Publish</text>
-    <text x="813" y="148" textLength="660" fill="#000" opacity="0.25">2023-12-24</text>
-    <text x="803" y="138" textLength="660">2023-12-24</text>
+    <text x="813" y="148" textLength="660" fill="#000" opacity="0.25">2023-12-28</text>
+    <text x="803" y="138" textLength="660">2023-12-28</text>
   </g>
   
 </svg>
