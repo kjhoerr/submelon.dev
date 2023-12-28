@@ -27,5 +27,7 @@ jobs:
         cache: 'yarn'
     - name: Install Node.js packages
       run: yarn install --immutable --immutable-cache --check-cache
-    - name: Run test build
+    - name: Test formatting
+      run: yarn prettier -c src
+    - name: Test build
       run: yarn build
