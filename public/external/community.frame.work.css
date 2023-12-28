@@ -1,5 +1,18 @@
+/**
+ * https://submelon.dev/external/community.frame.work.css
+ * CSS Override script for https://community.frame.work/
+ *
+ * Provides the following features:
+ *  - a differing color for visited topics, so unread topics have better visibility
+ *  - better dark mode/light mode interoperability if relying on system/"auto" mode
+ *
+ * Most of this is borrowed from Framework's official themes and tweaked slightly.
+ *
+ * You can use a browser extension like "Custom Style Script" to link this stylesheet.
+ */
+
 tr.topic-list-item.visited > td.main-link > span.link-top-line > a {
-  color: #878787 !important;
+  color: var(--primary-medium) !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -125,125 +138,43 @@ tr.topic-list-item.visited > td.main-link > span.link-top-line > a {
     --bronze: #cd7f32;
   }
 
-  :root {
-    --chat-skeleton-animation-rgb: 44.1, 44.1, 44.1;
-  }
-
-  :root {
-    --font-family: Arial, sans-serif;
-  }
-
-  :root {
-    --heading-font-family: Arial, sans-serif;
-  }
-
-  html {
-    font-size: 16px;
-
-    &.text-size-smaller {
-      font-size: 14px;
-    }
-    &.text-size-larger {
-      font-size: 18px;
-    }
-    &.text-size-largest {
-      font-size: 20px;
-    }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 600;
-  }
-
-  strong {
-    font-weight: 600;
-  }
-
-  .wrap {
-    max-width: 1360px;
-  }
-
-  .d-header {
-    height: 5em;
-    box-shadow: none;
-  }
-
   .custom-header-links .headerLink a {
-    font-size: 16px !important;
-    color: white !important;
-  }
-
-  .nav-pills > li {
-    margin-right: 0.5em;
-  }
-
-  .nav-pills > li > a {
-    font-size: 16px;
-
-    &:hover {
-      background-color: transparent;
-    }
+    color: var(--primary) !important;
   }
 
   .nav-pills > li a.active {
-    color: #f5f5f5;
+    color: var(--primary);
     background-color: transparent;
-    border-bottom: 3px solid #f45a27;
+    border-bottom: 3px solid var(--tertiary);
   }
 
-  .list-controls .combo-box .combo-box-header {
-    background: transparent;
-    border-radius: 2rem;
-  }
-
-  .btn {
-    font-size: 16px;
-    border-radius: 2rem;
-
-    .d-icon {
-      color: #f5f5f5;
-    }
+  .btn.d-icon {
+    color: var(--primary);
   }
 
   .btn-primary,
   #create-topic {
-    background: #f45a27;
-    color: #f5f5f5;
-    font-size: 16px;
+    background: var(--tertiary);
+    color: var(--primary);
+  }
 
-    &:hover {
-      background-color: darkorange;
-      color: black !important;
+  .btn-primary:hover,
+  #create-topic:hover {
+    background-color: darkorange;
+    color: var(--secondary) !important;
+  }
 
-      .d-icon {
-        color: black !important;
-      }
-    }
+  .btn-primary:hover .d-icon,
+  #create-topic:hover .d-icon {
+    color: var(--secondary) !important;
   }
 
   .latest-topic-list-item .main-link a.title {
-    color: white !important;
+    color: var(--primary) !important;
   }
 
   .topic-list .main-link a.title {
-    color: white !important;
-  }
-
-  .category-list .category-name {
-    margin-bottom: 0.5rem;
-  }
-
-  .category-logo.aspect-image img {
-    max-width: 80%;
-  }
-
-  .category-logo.aspect-image {
-    margin-right: 0;
+    color: var(--primary) !important;
   }
 
   .category-list .category {
@@ -261,17 +192,13 @@ tr.topic-list-item.visited > td.main-link > span.link-top-line > a {
     color: var(--primary-high-or-secondary-low);
   }
 
-  .d-header {
-    border: none;
-  }
-
   .custom-footer {
     background: var(--primary-very-low);
   }
 
   .custom-footer .flexbox,
   .custom-footer .third-box .social .social-link .d-icon {
-    color: white;
+    color: var(--primary);
   }
 
   .custom-footer .footer-section-link-wrapper a,
@@ -284,12 +211,9 @@ tr.topic-list-item.visited > td.main-link > span.link-top-line > a {
   }
 
   .categories-list .category-list td {
-    color: white;
+    color: var(--primary);
   }
 
-  .category-list-item.category .coldmap-high {
-    opacity: 0.8;
-  }
   .d-header .title a,
   .d-header .title a:visited,
   .list-cell,
@@ -303,6 +227,6 @@ tr.topic-list-item.visited > td.main-link > span.link-top-line > a {
   }
 
   tr.topic-list-item.visited > td.main-link > span.link-top-line > a {
-    color: #aaa !important;
+    color: var(--primary-700) !important;
   }
 }
