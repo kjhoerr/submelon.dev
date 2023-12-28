@@ -1,3 +1,11 @@
+/**
+ * https://submelon.dev/external/news.ycombinator.com.css
+ * CSS Override script for https://news.ycombinator.com/
+ *
+ * I am not sure where I got these specific styles from or how much I tweaked them.
+ * Provides system/"auto" dark theme and keeps the default light theme when applicable.
+ */
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #262626 !important;
@@ -14,10 +22,21 @@
   }
 
   /* Bright text */
-  td.title a:link, span.comment font, span.comment font a:link, u a:link, span.yclinks a:link, body:not([id]),
-    td:nth-child(2):not(.subtext) > a:link, input, textarea, p > a, a > u, .c00, .c00 a:link,
-    a[href="http://www.ycombinator.com/apply/"], a[href="https://www.ycombinator.com/apply/"]
-  {
+  td.title a:link,
+  span.comment font,
+  span.comment font a:link,
+  u a:link,
+  span.yclinks a:link,
+  body:not([id]),
+  td:nth-child(2):not(.subtext) > a:link,
+  input,
+  textarea,
+  p > a,
+  a > u,
+  .c00,
+  .c00 a:link,
+  a[href="http://www.ycombinator.com/apply/"],
+  a[href="https://www.ycombinator.com/apply/"] {
     color: #ccc !important;
   }
 
