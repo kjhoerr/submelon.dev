@@ -36,7 +36,8 @@
   .c00,
   .c00 a:link,
   a[href="http://www.ycombinator.com/apply/"],
-  a[href="https://www.ycombinator.com/apply/"] {
+  a[href="https://www.ycombinator.com/apply/"]
+  {
     color: #ccc !important;
   }
 
