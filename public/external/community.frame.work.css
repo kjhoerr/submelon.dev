@@ -7,6 +7,8 @@
  *  - better dark mode/light mode interoperability if relying on system/"auto" mode
  *
  * Most of this is borrowed from Framework's official themes and tweaked slightly.
+ * This is to be used with the "Framework" theme as opposed to "Framework (Dark)"
+ * for the overrides to work properly.
  *
  * You can use a browser extension like "Custom Style Script" to link this stylesheet.
  */
