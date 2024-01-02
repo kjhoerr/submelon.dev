@@ -4,6 +4,8 @@
  *
  * I am not sure where I got these specific styles from or how much I tweaked them.
  * Provides system/"auto" dark theme and keeps the default light theme when applicable.
+ *
+ * You can use a browser extension like "Custom Style Script" to link this stylesheet.
  */
 
 @media (prefers-color-scheme: dark) {
