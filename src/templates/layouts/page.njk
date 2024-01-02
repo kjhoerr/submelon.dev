@@ -1,29 +1,36 @@
+---
+pageTitle: Kevin J Hoerr <kjhoerr@submelon.tech>
+copyYear: 2024
+author: Kevin J Hoerr
+description: The official website of Kevin Hoerr, developer of websites.
+themeColor: "#e1e1e1"
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charSet="utf-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="theme-color" content="#e1e1e1"/>
-    <meta name="description" content="The official website of Kevin Hoerr, developer of websites."/>
-    <meta name="twitter:description" content="The official website of Kevin Hoerr, developer of websites."/>
-    <meta name="twitter:title" content="Kevin J Hoerr &lt;kjhoerr&#64;submelon.tech&gt;"/>
-    <meta name="twitter:creator" content="Kevin J Hoerr"/>
+    <meta name="theme-color" content="{{ themeColor }}"/>
+    <meta name="description" content="{{ description }}"/>
+    <meta name="twitter:description" content="{{ description }}"/>
+    <meta name="twitter:title" content="{{ pageTitle | escape | replace('@', '&#64;') }}"/>
+    <meta name="twitter:creator" content="{{ author }}"/>
     <meta name="twitter:card" content="summary"/>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self';img-src 'self' data:;script-src 'none';object-src 'none';base-uri 'none';">
+    {% metaCsp %}
     <meta name="generator" content="{{ eleventy.generator }}"> 
-    <link rel="stylesheet" href="/styles.css"/>
-    <link rel="icon" href="/favicon-32x32.png" type="image/png"/>
-    <link rel="manifest" href="/manifest.webmanifest"/>
-    <link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/>
-    <link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/>
-    <link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/>
-    <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/>
-    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/>
-    <link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/>
-    <link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/>
-    <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/>
-    <title>Kevin J Hoerr &lt;kjhoerr&#64;submelon.tech&gt;</title>
+    <link rel="stylesheet" href="{{ '/styles.css' | url }}"/>
+    <link rel="icon" href="{{ '/favicon-32x32.png' | url }}" type="image/png"/>
+    <link rel="manifest" href="{{ '/manifest.webmanifest' | url }}"/>
+    <link rel="apple-touch-icon" sizes="48x48" href="{{ '/icons/icon-48x48.png' | url }}"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ '/icons/icon-72x72.png' | url }}"/>
+    <link rel="apple-touch-icon" sizes="96x96" href="{{ '/icons/icon-96x96.png' | url }}"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ '/icons/icon-144x144.png' | url }}"/>
+    <link rel="apple-touch-icon" sizes="192x192" href="{{ '/icons/icon-192x192.png' | url }}"/>
+    <link rel="apple-touch-icon" sizes="256x256" href="{{ '/icons/icon-256x256.png' | url }}"/>
+    <link rel="apple-touch-icon" sizes="384x384" href="{{ '/icons/icon-384x384.png' | url }}"/>
+    <link rel="apple-touch-icon" sizes="512x512" href="{{ '/icons/icon-512x512.png' | url }}"/>
+    <title>{{ pageTitle | escape | replace('@', '&#64;') }}</title>
   </head>
   <body>
     <main>
@@ -31,7 +38,7 @@
 {{ content | safe }}
       </article>
       <footer>
-        <span>&copy;2024 kjhoerr&#64;https://submelon.dev/:{{ buildTimeEncoded }}</span>
+        <span>&copy;{{ copyYear }} kjhoerr&#64;https://submelon.dev/:{{ buildTimeEncoded }}</span>
       </footer>
     </main>
   </body>
