@@ -1,10 +1,10 @@
 ---
-pageTitle: Kevin J Hoerr <kjhoerr@submelon.tech>
 copyYear: 2024
-author: Kevin J Hoerr
+author: kjhoerr
 description: The official website of Kevin Hoerr, developer of websites.
 themeColor: "#e1e1e1"
 ---
+{% set pageTitle = site.title | escape | replace('@', '&#64;') %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,10 +14,10 @@ themeColor: "#e1e1e1"
     <meta name="theme-color" content="{{ themeColor }}"/>
     <meta name="description" content="{{ description }}"/>
     <meta name="twitter:description" content="{{ description }}"/>
-    <meta name="twitter:title" content="{{ pageTitle | escape | replace('@', '&#64;') }}"/>
+    <meta name="twitter:title" content="{{ title if title else pageTitle }}"/>
     <meta name="twitter:creator" content="{{ author }}"/>
     <meta name="twitter:card" content="summary"/>
-    {% metaCsp %}
+    <meta http-equiv="Content-Security-Policy" content="{{ ( "default-src 'self';img-src 'self' data:;script-src 'none';object-src 'none';base-uri 'none';connect-src: 'none';" if eleventy.env.runMode == "build" else "default-src http://localhost:8080/;img-src http://localhost:8080/ data:;connect-src ws://localhost:8080/;script-src 'strict-dynamic' 'sha512-7Y25+FX/kRUbZEHtQBOSLffzofBxz8ABQErLAVpGkfzactkpJU5wtTmhIfIZeTw7VHg1JeTIC5kHkzPq7LqR1w==';" ) | safe }}">
     <meta name="generator" content="{{ eleventy.generator }}"> 
     <link rel="stylesheet" href="{{ '/styles.css' | url }}"/>
     <link rel="icon" href="{{ '/favicon-32x32.png' | url }}" type="image/png"/>
@@ -30,7 +30,7 @@ themeColor: "#e1e1e1"
     <link rel="apple-touch-icon" sizes="256x256" href="{{ '/icons/icon-256x256.png' | url }}"/>
     <link rel="apple-touch-icon" sizes="384x384" href="{{ '/icons/icon-384x384.png' | url }}"/>
     <link rel="apple-touch-icon" sizes="512x512" href="{{ '/icons/icon-512x512.png' | url }}"/>
-    <title>{{ pageTitle | escape | replace('@', '&#64;') }}</title>
+    <title>{{ pageTitle }}{{ " | " if title }}{{ title }}</title>
   </head>
   <body>
     <main>
@@ -38,7 +38,7 @@ themeColor: "#e1e1e1"
 {{ content | safe }}
       </article>
       <footer>
-        <span>&copy;{{ copyYear }} kjhoerr&#64;https://submelon.dev/:{{ buildTimeEncoded }}</span>
+        <span>&copy;{{ copyYear }} {{ author }}&#64;{{ site.url }}/:{{ buildTimeEncoded }}</span>
       </footer>
     </main>
   </body>

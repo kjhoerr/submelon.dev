@@ -47,21 +47,6 @@ ${Object.values(metadata)
     },
   );
 
-  // add `cspMode` shortcode
-  config.addShortcode("metaCsp", function () {
-    const runMode = this.eleventy.env.runMode;
-    let policy: string;
-    if (runMode === "serve" || runMode == "watch") {
-      policy =
-        "default-src http://localhost:8080/;img-src http://localhost:8080/ data:;connect-src ws://localhost:8080/;script-src 'strict-dynamic' 'sha512-7Y25+FX/kRUbZEHtQBOSLffzofBxz8ABQErLAVpGkfzactkpJU5wtTmhIfIZeTw7VHg1JeTIC5kHkzPq7LqR1w==';";
-    } else {
-      // runMode === "build" or unknown
-      policy =
-        "default-src 'self';img-src 'self' data:;script-src 'none';object-src 'none';base-uri 'none';connect-src: 'none';";
-    }
-    return `<meta http-equiv="Content-Security-Policy" content="${policy}">`;
-  });
-
   // add `date` filter
   config.addFilter("formatDate", formatDate);
 
