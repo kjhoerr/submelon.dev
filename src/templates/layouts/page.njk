@@ -1,5 +1,6 @@
 ---
-copyYear: 2024
+# technically for any website/blog this should be year of first publication - first commit in git was 2022, but it was available at least from 2020
+copyYear: 2022
 author: kjhoerr
 description: The official website of Kevin Hoerr, developer of websites.
 themeColor: "#e1e1e1"
@@ -17,7 +18,7 @@ themeColor: "#e1e1e1"
     <meta name="twitter:title" content="{{ title if title else pageTitle }}"/>
     <meta name="twitter:creator" content="{{ author }}"/>
     <meta name="twitter:card" content="summary"/>
-    <meta http-equiv="Content-Security-Policy" content="{{ ( "default-src 'self';img-src 'self' data:;script-src 'none';object-src 'none';base-uri 'none';connect-src: 'none';" if eleventy.env.runMode == "build" else "default-src http://localhost:8080/;img-src http://localhost:8080/ data:;connect-src ws://localhost:8080/;script-src 'strict-dynamic' 'sha512-7Y25+FX/kRUbZEHtQBOSLffzofBxz8ABQErLAVpGkfzactkpJU5wtTmhIfIZeTw7VHg1JeTIC5kHkzPq7LqR1w==';" ) | safe }}">
+    <meta http-equiv="Content-Security-Policy" content="{{ ( "default-src 'self';img-src 'self' data:;script-src 'none';object-src 'none';base-uri 'none';connect-src 'none';" if eleventy.env.runMode == "build" else "default-src http://localhost:8080/;img-src http://localhost:8080/ data:;connect-src ws://localhost:8080/;script-src 'strict-dynamic' 'sha512-7Y25+FX/kRUbZEHtQBOSLffzofBxz8ABQErLAVpGkfzactkpJU5wtTmhIfIZeTw7VHg1JeTIC5kHkzPq7LqR1w==';" ) | safe }}">
     <meta name="generator" content="{{ eleventy.generator }}"> 
     <link rel="stylesheet" href="{{ '/styles.css' | url }}"/>
     <link rel="icon" href="{{ '/favicon-32x32.png' | url }}" type="image/png"/>
