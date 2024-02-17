@@ -45,9 +45,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy-img@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@11ty/eleventy-img@npm:4.0.0"
+"@11ty/eleventy-img@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "@11ty/eleventy-img@npm:4.0.2"
   dependencies:
     "@11ty/eleventy-fetch": ^4.0.0
     brotli-size: ^4.0.0
@@ -56,7 +56,7 @@ __metadata:
     image-size: ^1.1.1
     p-queue: ^6.6.2
     sharp: ^0.33.2
-  checksum: cfd4d05f2a46518e38d0f1aef73b083dfe588f6fc3dba166c2f948d47d849473c2f1c5a28c87b079627fc50d06d13beda30cdd754a12b25831a2af3783c301ce
+  checksum: 9fe9e13662e24277dd7223b205ea64230dd90a13f653c0474778b85a71d9698ea0d90e65bb6ee85978ce06b9a3ce5aa857319befbe149c7be1dd8ac390ecb219
   languageName: node
   linkType: hard
 
@@ -3096,7 +3096,7 @@ __metadata:
   resolution: "submelon.dev@workspace:."
   dependencies:
     "@11ty/eleventy": ^2.0.1
-    "@11ty/eleventy-img": ^4.0.0
+    "@11ty/eleventy-img": ^4.0.2
     "@types/11ty__eleventy-img": ^2.0.5
     "@types/node": ^20.11.19
     badgen-cli: ^0.2.0
