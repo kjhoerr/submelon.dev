@@ -20,7 +20,7 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^4.0.2",
     "@types/11ty__eleventy-img": "^2.0.5",
-    "@types/node": "^20.11.25",
+    "@types/node": "^20.11.28",
     "badgen-cli": "^0.2.0",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
