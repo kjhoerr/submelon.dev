@@ -500,13 +500,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/11ty__eleventy-img@npm:^2.0.5":
-  version: 2.0.5
-  resolution: "@types/11ty__eleventy-img@npm:2.0.5"
+"@types/11ty__eleventy-img@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@types/11ty__eleventy-img@npm:4.0.0"
   dependencies:
     "@types/node": "*"
     "@types/sharp": ^0.31.0
-  checksum: dbd518b5eafd2d28d82e064bf8f056a492bc510210c551e0a100b5f707f1a01878c4fc44ade99265280ba50477a94dc5f0c300a205e69ad832ae24f60ea701d8
+  checksum: af676e44c6ac2bc1f0dc671acd7f56331af65cdc1f1c145ddeea99dc3f18a64feaea3c94b28a00633e25c4cc024115637344536bd0c5c5a4586ae2c91058791b
   languageName: node
   linkType: hard
 
@@ -3097,7 +3097,7 @@ __metadata:
   dependencies:
     "@11ty/eleventy": ^2.0.1
     "@11ty/eleventy-img": ^4.0.2
-    "@types/11ty__eleventy-img": ^2.0.5
+    "@types/11ty__eleventy-img": ^4.0.0
     "@types/node": ^20.11.30
     badgen-cli: ^0.2.0
     prettier: ^3.2.5
