@@ -526,12 +526,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.14.2":
-  version: 20.14.2
-  resolution: "@types/node@npm:20.14.2"
+"@types/node@npm:^20.14.8":
+  version: 20.14.8
+  resolution: "@types/node@npm:20.14.8"
   dependencies:
     undici-types: ~5.26.4
-  checksum: 265362479b8f3b50fcd1e3f9e9af6121feb01a478dff0335ae67cccc3babfe45d0f12209d3d350595eebd7e67471762697b877c380513f8e5d27a238fa50c805
+  checksum: a9128840005d4a0aba68826e22ac0fdd86bb9073f1d274217d3509b52f969d1aab83415c85a8461259f33cf34f9eee02fb13dca059865bed2ba2e728bc936a76
   languageName: node
   linkType: hard
 
@@ -3105,7 +3105,7 @@ __metadata:
     "@11ty/eleventy": ^2.0.1
     "@11ty/eleventy-img": ^4.0.2
     "@types/11ty__eleventy-img": ^4.0.0
-    "@types/node": ^20.14.2
+    "@types/node": ^20.14.8
     badgen-cli: ^0.2.0
     prettier: ^3.3.2
     ts-node: ^10.9.2
