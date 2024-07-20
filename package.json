@@ -22,7 +22,7 @@
     "@types/11ty__eleventy-img": "^4.0.0",
     "@types/node": "^20.14.11",
     "badgen-cli": "^0.2.0",
-    "prettier": "^3.3.2",
+    "prettier": "^3.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3"
   },
