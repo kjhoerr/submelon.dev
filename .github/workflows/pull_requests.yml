@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Check changes (prevent pushing to public/)
-      uses: xalvarez/prevent-file-change-action@v1.9.0
+      uses: xalvarez/prevent-file-change-action@v1.9.1
       with:
         githubToken: ${{ secrets.GITHUB_TOKEN }}
         pattern: public/
