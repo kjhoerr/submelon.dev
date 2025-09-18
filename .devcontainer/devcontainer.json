@@ -14,8 +14,11 @@
 			]
 		}
 	},
-
+	"runArgs": [
+		"--userns=keep-id"
+	],
+	"remoteUser": "node",
+	"containerUser": "node",
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "yarn install"
-
 }
