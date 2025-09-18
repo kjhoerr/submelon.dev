@@ -52,8 +52,8 @@ i.icon {
   filter: invert(37%) sepia(0%) saturate(1906%) hue-rotate(177deg)
     brightness(97%) contrast(72%);
 }
-i.icon.fa-code {
-  background-image: url(icons/code.svg);
+i.icon.fa-fingerprint {
+  background-image: url(icons/fingerprint.svg);
 }
 i.icon.fa-github {
   background-image: url(icons/github.svg);
