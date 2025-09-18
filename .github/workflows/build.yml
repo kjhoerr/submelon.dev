@@ -2,7 +2,7 @@ name: submelon.dev build
 
 on:
   push:
-    branches: [ "trunk" ]
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -51,4 +51,4 @@ jobs:
       uses: actions-js/push@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: trunk
+        branch: main
