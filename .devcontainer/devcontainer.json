@@ -1,7 +1,6 @@
 {
 	"name": "Submelon FP",
-	"image": "mcr.microsoft.com/devcontainers/typescript-node:18-bullseye",
-	
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:22-bookworm",
 	"customizations": {
 		"vscode": {
 			"settings": {
@@ -15,8 +14,11 @@
 			]
 		}
 	},
-
+	"runArgs": [
+		"--userns=keep-id"
+	],
+	"remoteUser": "node",
+	"containerUser": "node",
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "yarn install"
-
 }
