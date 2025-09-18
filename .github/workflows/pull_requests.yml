@@ -2,7 +2,7 @@ name: submelon.dev PR
 
 on:
   pull_request_target:
-    branches: [ "trunk" ]
+    branches: [ "main" ]
 
 jobs:
   build:
