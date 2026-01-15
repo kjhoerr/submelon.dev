@@ -55,8 +55,8 @@ i.icon {
 i.icon.fa-fingerprint {
   background-image: url(icons/fingerprint.svg);
 }
-i.icon.fa-github {
-  background-image: url(icons/github.svg);
+i.icon.fa-git-alt {
+  background-image: url(icons/git-alt.svg);
 }
 i.icon.fa-mastodon {
   background-image: url(icons/mastodon.svg);
