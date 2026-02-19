@@ -17,7 +17,7 @@
     "start": "npx @11ty/eleventy --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-img": "^4.0.2",
     "@types/11ty__eleventy-img": "^4.0.0",
     "@types/node": "^22.19.11",
