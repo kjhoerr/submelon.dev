@@ -762,12 +762,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.14.12":
-  version: 20.14.12
-  resolution: "@types/node@npm:20.14.12"
+"@types/node@npm:^22.19.11":
+  version: 22.19.11
+  resolution: "@types/node@npm:22.19.11"
   dependencies:
-    undici-types: ~5.26.4
-  checksum: 1dd493d9e27da43fc374b17cf4b956dbd1dfe20ecf4749408a1db046c79b5a39261a2aa7a3f59b79fd1b5632b861ba72837779d812e0d3b6cf5b22f1650fe722
+    undici-types: ~6.21.0
+  checksum: b64703389fa4648a8ac7bce44902dbef9a4c46b91cce1e951d01d6df23dbb0579c3d765f0d00e9053425e21ed9a30890668506ec0bae98c5c29cc978d45ced1f
   languageName: node
   linkType: hard
 
@@ -3441,7 +3441,7 @@ __metadata:
     "@11ty/eleventy": ^2.0.1
     "@11ty/eleventy-img": ^4.0.2
     "@types/11ty__eleventy-img": ^4.0.0
-    "@types/node": ^20.14.12
+    "@types/node": ^22.19.11
     badgen-cli: ^0.2.0
     prettier: ^3.3.3
     sharp: ^0.34.5
@@ -3595,6 +3595,13 @@ __metadata:
   version: 5.26.5
   resolution: "undici-types@npm:5.26.5"
   checksum: 3192ef6f3fd5df652f2dc1cd782b49d6ff14dc98e5dced492aa8a8c65425227da5da6aafe22523c67f035a272c599bb89cfe803c1db6311e44bed3042fc25487
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~6.21.0":
+  version: 6.21.0
+  resolution: "undici-types@npm:6.21.0"
+  checksum: 46331c7d6016bf85b3e8f20c159d62f5ae471aba1eb3dc52fff35a0259d58dcc7d592d4cc4f00c5f9243fa738a11cfa48bd20203040d4a9e6bc25e807fab7ab3
   languageName: node
   linkType: hard
 
