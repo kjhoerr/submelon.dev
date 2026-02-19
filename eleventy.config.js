@@ -1,6 +1,8 @@
 import { formatDate, getTimestamp } from "./src/util/timestamp.js";
 import BuildInfo from "./config.json" with { type: "json" };
 import Image from "@11ty/eleventy-img";
+import sriToolbox from "sri-toolbox";
+import fs from "node:fs";
 
 const ImageFormat = (sizes) => (imageFormat) => {
   return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat
@@ -22,6 +24,9 @@ export default async function (config) {
   config.addGlobalData("site", () => BuildInfo);
   config.addGlobalData("buildTimeEncoded", () => {
     return getTimestamp(Number(BuildInfo.version));
+  });
+  config.addGlobalData("reloadClientHash", () => {
+    return sriToolbox.generate({ algorithms: ["sha512"] }, fs.readFileSync("node_modules/@11ty/eleventy-dev-server/client/reload-client.js", "utf8"));
   });
 
   // images

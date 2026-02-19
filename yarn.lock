@@ -1677,6 +1677,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sri-toolbox@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "sri-toolbox@npm:0.2.0"
+  checksum: 10/3f58c3727eedde21c2387d88513b74d03bf798483516c68da4abb4be882d84a083f2d30990d56d8bd1ca5cf72dec08f67d6527bf5e6874a96014905bd008e11c
+  languageName: node
+  linkType: hard
+
 "ssri@npm:^13.0.0":
   version: 13.0.1
   resolution: "ssri@npm:13.0.1"
@@ -1708,6 +1715,7 @@ __metadata:
     "@11ty/eleventy-img": "npm:^6.0.4"
     badgen-cli: "npm:^0.2.0"
     sharp: "npm:^0.34.5"
+    sri-toolbox: "npm:^0.2.0"
   languageName: unknown
   linkType: soft
 
