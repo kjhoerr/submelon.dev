@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "@11ty/eleventy-img": "^4.0.2",
+    "@11ty/eleventy-img": "^6.0.4",
     "@types/11ty__eleventy-img": "^4.0.0",
     "@types/node": "^22.19.11",
     "badgen-cli": "^0.2.0",
