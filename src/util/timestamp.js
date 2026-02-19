@@ -22,7 +22,7 @@ const SHORT_CHARS =
  *
  * @deprecated {@link encodeBase62} is now used to generate the timestamp instead
  */
-export function toShort(valu: number): string {
+export function toShort(valu) {
   return (
     valu
       .toString()
@@ -35,7 +35,7 @@ export function toShort(valu: number): string {
 /**
  * Encodes a number as a base-62 value string.
  */
-export function encodeBase62(valu: number): string {
+export function encodeBase62(valu) {
   let res = "";
   const mod = 62;
 
@@ -51,7 +51,7 @@ export function encodeBase62(valu: number): string {
  * Translates a Unix EPOCH timestamp to a 62-char expression of the date. See
  * the `toShort()` method for more details on the meaning of the final output.
  */
-export function getTimestamp(seconds: number): string {
+export function getTimestamp(seconds) {
   const date = new Date(seconds * 1000);
   const dateArr = [
     date.getUTCFullYear(),
@@ -67,7 +67,7 @@ export function getTimestamp(seconds: number): string {
 /**
  * Returns a date in the ISO-8601 format
  */
-export function formatDate(date: Date): string {
+export function formatDate(date) {
   return (
     date.getUTCFullYear() +
     "-" +
