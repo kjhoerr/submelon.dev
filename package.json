@@ -5,6 +5,7 @@
   "description": "submelon.dev",
   "author": "Kevin J Hoerr",
   "license": "BlueOak-1.0.0",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/kjhoerr/submelon.dev.git"
@@ -12,19 +13,13 @@
   "scripts": {
     "build": "npm run clean && npx @11ty/eleventy",
     "clean": "rm -rf public/*",
-    "format": "prettier -w src",
     "post-build": "badgen -j \"Last Publish\" -s \"$(date --date=\"@$(cat config.json | grep 'version' | grep -oe '[0-9]*')\" -I)\" -c blue > publish-badge.svg",
     "start": "npx @11ty/eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-img": "^6.0.4",
-    "@types/11ty__eleventy-img": "^4.0.0",
-    "@types/node": "^22.19.11",
-    "badgen-cli": "^0.2.0",
-    "prettier": "^3.3.3",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.4"
+    "badgen-cli": "^0.2.0"
   },
   "dependencies": {
     "sharp": "^0.34.5"
